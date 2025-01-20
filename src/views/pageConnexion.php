@@ -14,8 +14,8 @@
     </div>
     <div class="content">
 
-        <form class="connexion" method="POST" action="vérificationConnexion">
-            <input type="text" name="ident" id="ident" placeholder="Identifiant" />
+        <form class="connexion" method="POST" action="verificationConnexion">
+            <input type="text" name="mail" id="ident" placeholder="Mail" />
             <input type="password" name="passwd" id="passwd" placeholder="Mot de passe" />
             <button type="button" name="toggle-password" id="toggle-password" class="toggle-password"
                 data-target="passwd">afficher</button>
