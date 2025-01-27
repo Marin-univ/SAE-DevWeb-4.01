@@ -1,0 +1,73 @@
+/* Style général du header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Style de la barre de recherche */
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+input[type="search"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Style des boutons de connexion et inscription */
+#connection, #inscription {
+    margin-left: 15px;
+}
+
+/* Style des favoris et avis si connecté */
+#favoris, #avis {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff6600;
+}
