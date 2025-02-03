@@ -1,11 +1,14 @@
 /* Style général du header */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Permet de mettre le nav sous le header */
     align-items: center;
-    background-color: #e0e0e0;
-    padding: 20px;
+    padding: 40px 20px; /* Augmente la taille du header */
     font-family: Arial, sans-serif;
+    background-image: url("../images/image_header.png");
+    background-size: cover; /* Ajuste l'image pour couvrir tout le header */
+    background-position: center;
+    height: 200px; /* Augmenter la hauteur */
 }
 
 /* Style de la barre de recherche */
@@ -48,10 +51,18 @@ button:hover {
     margin-left: 15px;
 }
 
-/* Navigation */
+/* Navigation sous le header */
+nav {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Ajoute un fond blanc légèrement transparent */
+    padding: 10px 0;
+    text-align: center;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: center; /* Centre le menu */
     gap: 20px;
     margin: 0;
     padding: 0;
