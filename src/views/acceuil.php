@@ -12,7 +12,7 @@
     </header>
     <main>
         <section id="Plan">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16418.53778744161!2d1.9077983058651669!3d47.9009375843663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1739370159653!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div id="map"></div>
         </section>
         <section id="Une">
             <h1>Restaurants à la une</h1>
@@ -33,5 +33,26 @@
     </main>
     <footer>
     </footer>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpdG08ZPHnOb0noOTfhdz2ZmkiDA6U-wM&callback=initMap"></script>
+    <script>
+        function initMap() {
+            const selector = document.getElementById("map")
+            const center = { lat: 47.9, lng: 1.9}            
+            const options = {
+                center: center,
+                zoom : 14,
+            }
+
+            const map = new google.maps.Map(selector, options);
+        }
+    </script>
+    <style>
+        #map {
+    width: 600px;
+    height: 600px;
+    background: #d6d6d6;
+}
+
+    </style>
 </body>
 </html>
