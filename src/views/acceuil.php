@@ -33,26 +33,41 @@
     </main>
     <footer>
     </footer>
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpdG08ZPHnOb0noOTfhdz2ZmkiDA6U-wM&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpdG08ZPHnOb0noOTfhdz2ZmkiDA6U-wM&callback=initMap"></script>
     <script>
         function initMap() {
             const selector = document.getElementById("map")
-            const center = { lat: 47.9, lng: 1.9}            
+            const center = { lat: 47.9, lng: 1.9}
             const options = {
                 center: center,
                 zoom : 14,
             }
 
             const map = new google.maps.Map(selector, options);
+
+    fetch("../../public/assets/json/restaurants_orleans.json")
+    .then(response => response.json())
+    .then(json => {
+        json.forEach(restaurant => {
+            console.log("test");
+            const marker = new google.maps.Marker({
+                position: { 
+                    lat: restaurant["geo_shape"]["geometry"]["coordinates"][1], 
+                    lng: restaurant["geo_shape"]["geometry"]["coordinates"][0]
+                },
+                map: map
+            });
+        });
+    })
+
         }
     </script>
     <style>
         #map {
-    width: 600px;
-    height: 600px;
-    background: #d6d6d6;
-}
-
+            width: 600px;
+            height: 600px;
+            background: #d6d6d6;
+        }
     </style>
 </body>
 </html>
