@@ -14,7 +14,7 @@ class Router
         $lesPOST = $requestUri[1];
         $lesPOST = explode(";", $lesPOST);
         
-
+        
         switch ($requestUri[0]) {
             case '/':
                 require_once VIEWS_PATH . '/acceuil.php';
