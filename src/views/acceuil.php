@@ -49,7 +49,6 @@
     .then(response => response.json())
     .then(json => {
         json.forEach(restaurant => {
-            console.log("test");
             const marker = new google.maps.Marker({
                 position: { 
                     lat: restaurant["geo_shape"]["geometry"]["coordinates"][1], 
