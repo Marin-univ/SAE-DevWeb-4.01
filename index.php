@@ -1,19 +1,14 @@
 <?php
-require_once '../vendor/autoload.php';
-require_once '../config/config.php';
+require_once __DIR__ . '/src/config/config.php';
+require_once __DIR__ . '/src/config/Autoloader.php';
 
-use App\Controllers\HomeController;
+use src\config\Autoloader;
+use src\controllers\GestionJSON;
+use src\controllers\Router;
+use src\controllers\Database;
 
-$controller = new HomeController();
+Autoloader::register();
+$chargerJSON = new GestionJSON();
 
-$requestUri = $_SERVER['REQUEST_URI'];
-
-if ($requestUri === '/') {
-    $controller->index();
-} elseif (preg_match('/^\/user\/(\d+)$/', $requestUri, $matches)) {
-    $controller->show($matches[1]);
-} else {
-    http_response_code(404);
-    echo '404 Not Found';
-}
-?>
+$router = new Router();
+$router->handleRequest();
