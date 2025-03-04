@@ -10,7 +10,5 @@ use src\controllers\Database;
 Autoloader::register();
 $chargerJSON = new GestionJSON();
 
-$db = Database::getConnection();
-
 $router = new Router();
 $router->handleRequest();
