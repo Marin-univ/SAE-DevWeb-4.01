@@ -40,5 +40,4 @@ class Database {
         }
         return self::$connectionMysql;
     }
-
 }
