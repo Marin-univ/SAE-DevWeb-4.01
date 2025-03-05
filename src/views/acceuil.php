@@ -47,12 +47,11 @@
         }
     </script>
     <style>
-        #map {
-    width: 600px;
-    height: 600px;
-    background: #d6d6d6;
-}
-
+    #map {
+        width: 600px;
+        height: 600px;
+        background: #d6d6d6;
+    }
     </style>
 </body>
 </html>
