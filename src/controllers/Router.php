@@ -11,8 +11,8 @@ class Router
         $data = $_SERVER['REQUEST_URI'];
         $data = str_replace('/PROJET_FI', '', $data);
         $requestUri = explode("?", $data);
-        $lesPOST = $requestUri[1];
-        $lesPOST = explode(";", $lesPOST);
+        //$lesPOST = $requestUri[1];
+        //$lesPOST = explode(";", $lesPOST);
         
         
         switch ($requestUri[0]) {
@@ -25,7 +25,15 @@ class Router
                 break;
 
             case '/connexion':
-                require_once VIEWS_PATH . '/connexion.php';
+                require_once VIEWS_PATH . '/pageConnexion.php';
+                break;
+
+            case '/verfiCo':
+                require_once CONTROLLERS_PATH . '/verificationConnexion.php';
+                break;
+
+            case '/verfiInscription':
+                require_once CONTROLLERS_PATH . '/verificationInscription.php';
                 break;
 
             default:
