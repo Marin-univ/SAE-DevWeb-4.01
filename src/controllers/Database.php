@@ -6,6 +6,7 @@ use PDOException;
 
 class Database {
     private static $connection = null;
+    private static $connectionMysql = null;
 
     public static function getConnection() {
         $password = 't4heVMUqWKuYD2D7'; 
@@ -24,6 +25,20 @@ class Database {
         }
 
         return self::$connection;
+    }
+
+    public static function getMysqlConnection()
+    {
+        if (self::$connectionMysql === null) {
+            try {
+                self::$connectionMysql = new \PDO('mysql:host=servinfo-maria;dbname=DBmchesneau', 'mchesneau', 'mchesneau');
+                self::$connectionMysql->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+            } catch (\PDOException $e) {
+                error_log("\n\n" . 'Erreur de connexion : ' . $e->getMessage());
+                die('Erreur de connexion à la base de données.');
+            }
+        }
+        return self::$connectionMysql;
     }
 
 }
