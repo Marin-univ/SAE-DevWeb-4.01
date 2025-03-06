@@ -9,7 +9,7 @@ class Database {
     private static $connectionMysql = null;
 
     public static function getConnection() {
-        $password = 't4heVMUqWKuYD2D7'; 
+        $password = 't4heVMUqWKuYD2D7';
         $host = "aws-0-eu-west-3.pooler.supabase.com";
         $port = "6543";
         $dbname = "postgres";
@@ -19,7 +19,7 @@ class Database {
             try {
                 $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
                 self::$connection = new PDO($dsn, $user, $password);
-            } catch (PDOException $e) {
+            } catch (PDOException $e){
                 die("Erreur de connexion à la base de données : " . $e->getMessage());
             }
         }
