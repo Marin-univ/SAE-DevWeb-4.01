@@ -13,9 +13,12 @@ use src\controllers\Map;
     <link rel="stylesheet" href="/public/assets/css/pageAcceuil.css">
 </head>
 <body>
+
     <header>
         <?php include 'headerAcceuil.php'?>
     </header>
+
+
     <main>
         <?php 
         echo Map::affichage();
@@ -26,5 +29,6 @@ use src\controllers\Map;
         }
         ?>
     </main>
+    
 </body>
 </html>

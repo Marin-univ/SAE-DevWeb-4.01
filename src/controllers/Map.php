@@ -6,7 +6,7 @@ class Map{
     public static function affichage(){
         return <<<HTML
         <section id='Plan'>
-            <div id='map' style="width: 100%; height: 500px;"></div>
+            <div id='map'></div>
         </section>
         <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpdG08ZPHnOb0noOTfhdz2ZmkiDA6U-wM&callback=initMap"></script>
         <script>
