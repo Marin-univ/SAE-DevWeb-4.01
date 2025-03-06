@@ -26,8 +26,8 @@
         </section>
         <?php 
         // Si l'utilisateur est connecté, on affiche ses favoris et ses avis
-        if($_SESSION["id"]!=null){
-            include('acceuilonnecte.php');
+        if(isset($_SESSION["id"])){
+            include('acceuilConnecte.php');
         }
         ?>
     </main>
