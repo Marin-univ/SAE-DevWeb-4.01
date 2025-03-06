@@ -7,6 +7,8 @@ use src\controllers\GestionJSON;
 use src\controllers\Router;
 use src\controllers\Database;
 
+session_start();
+
 Autoloader::register();
 $chargerJSON = new GestionJSON();
 
