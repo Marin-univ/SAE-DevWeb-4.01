@@ -1,6 +1,6 @@
 <?php
 use src\controllers\Database;
-$bdd = Database::getConnection();
+$bdd = Database::getMysqlConnection();
 
 $mail = $_POST['mail'];
 $mdp_code = $_POST['passwd'];
