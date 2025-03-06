@@ -3,7 +3,7 @@ namespace src\controllers;
 
 class RestaurantsUne{
     public static function affichage(){
-        return '
+        return <<<HTML
         <section id="Une">
             <h1>Restaurants à la une</h1>
             <article>
@@ -13,7 +13,8 @@ class RestaurantsUne{
             <article></article>
             <article></article>
             <article></article>
-        </section>';
+        </section>
+        HTML;
     }
     
 }

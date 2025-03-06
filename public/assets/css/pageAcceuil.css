@@ -1,3 +1,5 @@
-h1{
-    color: red;
+#map {
+    width: 600px;
+    height: 600px;
+    background: #d6d6d6;
 }

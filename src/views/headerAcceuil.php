@@ -15,8 +15,8 @@
                 <button>Recherche</button>
             </div>
             <div class="buttons">
-                <?php if ($_SESSION["id"] == null) { ?>
-                    <button id="connection" onclick="window.location.href='/connection'">Se connecter</button>
+                <?php if (is_numeric($_SESSION["id"])) { ?>
+                    <button id="connection" onclick="window.location.href='/connexion'">Se connecter</button>
                     <button id="inscription" onclick="window.location.href='/inscription'">S'inscrire</button>
                 <?php } else { ?>
                     <button id="favoris" onclick="window.location.href='/page_favoris'">Mes favoris</button>

@@ -2,7 +2,7 @@
 namespace src\controllers;
 class ForYou{
     public static function affichage(){
-        return `
+        return <<<HTML
         <section id="FY">
         <h1>Pour vous</h1>
         <?php
@@ -16,6 +16,6 @@ class ForYou{
         <article></article>
         <article></article>
     </section>
-        `;
+    HTML;
     }
 }

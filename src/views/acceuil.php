@@ -22,12 +22,9 @@ use src\controllers\Map;
         echo RestaurantsUne::affichage();
 
         if($_SESSION["id"]!=null){
-            include 'acceuilonnecte.php';
+            include 'acceuilConnecte.php';
         }
         ?>
     </main>
-    <footer>
-    </footer>
-    
 </body>
 </html>
