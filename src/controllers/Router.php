@@ -18,7 +18,31 @@ class Router
                 break;
 
             case '/connexion':
-                require_once VIEWS_PATH . '/connexion.php';
+                require_once VIEWS_PATH . '/pageConnexion.php';
+                break;
+
+            case '/verfiCo':
+                require_once CONTROLLERS_PATH . '/verificationConnexion.php';
+                break;
+
+            case '/verfiInscription':
+                require_once CONTROLLERS_PATH . '/verificationInscription.php';
+                break;
+
+            case '/deconnexion':
+                require_once CONTROLLERS_PATH . '/deco.php';
+                break;
+
+            case '/SuppressionCompte':
+                require_once CONTROLLERS_PATH . '/suppressionCompte.php';
+                break;
+
+            case '/page_avis':
+                require_once VIEWS_PATH . '/pageAvis.php';
+                break;
+
+            case '/page_profil':
+                require_once VIEWS_PATH . '/pageProfil.php';
                 break;
 
             default:
