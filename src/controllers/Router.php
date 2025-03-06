@@ -18,7 +18,15 @@ class Router
                 break;
 
             case '/connexion':
-                require_once VIEWS_PATH . '/connexion.php';
+                require_once VIEWS_PATH . '/pageConnexion.php';
+                break;
+
+            case '/verfiCo':
+                require_once CONTROLLERS_PATH . '/verificationConnexion.php';
+                break;
+
+            case '/verfiInscription':
+                require_once CONTROLLERS_PATH . '/verificationInscription.php';
                 break;
 
             default:
