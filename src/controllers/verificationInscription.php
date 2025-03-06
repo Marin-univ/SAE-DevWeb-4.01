@@ -24,7 +24,6 @@ if (empty($row)) {
     $insertUser->bindParam(":mdp", $mdpH, PDO::PARAM_STR);
     $insertUser->execute();
 
-    $_SESSION["mail"] = $mail;
     header("Location: /connexion");
     exit;
 } else {
