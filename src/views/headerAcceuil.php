@@ -15,7 +15,8 @@
                 <button>Recherche</button>
             </div>
             <div class="buttons">
-                <?php if (is_numeric($_SESSION["id"])) { ?>
+                <?php
+                if ($_SESSION["id"] === null) { ?>
                     <button id="connection" onclick="window.location.href='/connexion'">Se connecter</button>
                     <button id="inscription" onclick="window.location.href='/inscription'">S'inscrire</button>
                 <?php } else { ?>
@@ -29,7 +30,8 @@
             <ul>
                 <li><a href="Plan">Plan des restaurants</a></li>
                 <li><a href="Une">Restaurants à la une</a></li>
-                <?php if ($_SESSION["id"] != null) { ?>
+                <?php
+                if ($_SESSION["id"] != null) { ?>
                     <li><a href="Favoris">Restaurants favoris</a></li>
                     <li><a href="FY">Pour vous</a></li>
                 <?php } ?>
