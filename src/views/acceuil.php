@@ -24,8 +24,9 @@ use src\controllers\Map;
         echo Map::affichage();
         echo RestaurantsUne::affichage();
 
-        if($_SESSION["id"]!=null){
-            include 'acceuilConnecte.php';
+        // Si l'utilisateur est connecté, on affiche ses favoris et ses avis
+        if(isset($_SESSION["id"])){
+            include('acceuilConnecte.php');
         }
         ?>
     </main>

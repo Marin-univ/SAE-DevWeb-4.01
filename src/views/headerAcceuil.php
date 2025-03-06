@@ -21,6 +21,7 @@
                 <?php } else { ?>
                     <button id="favoris" onclick="window.location.href='/page_favoris'">Mes favoris</button>
                     <button id="avis" onclick="window.location.href='/page_avis'">Mes avis</button>
+                    <button id="avis" onclick="window.location.href='/page_profil'">profil</button>
                 <?php } ?>
             </div>
         </div>

@@ -18,7 +18,7 @@ print_r($bd_mdp);
 
 if (password_verify($mdp_code, $bd_mdp) && !empty($row)) {
     $_SESSION["mail"] = $mail;
-    $_SESSION["id"] = $mail;
+    $_SESSION["id"] = $id;
     header('Location: /');
     exit;
 } else {

@@ -29,6 +29,22 @@ class Router
                 require_once CONTROLLERS_PATH . '/verificationInscription.php';
                 break;
 
+            case '/deconnexion':
+                require_once CONTROLLERS_PATH . '/deco.php';
+                break;
+
+            case '/SuppressionCompte':
+                require_once CONTROLLERS_PATH . '/suppressionCompte.php';
+                break;
+
+            case '/page_avis':
+                require_once VIEWS_PATH . '/pageAvis.php';
+                break;
+
+            case '/page_profil':
+                require_once VIEWS_PATH . '/pageProfil.php';
+                break;
+
             default:
                 header("Location: /");
                 exit;
