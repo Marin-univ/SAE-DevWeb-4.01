@@ -22,12 +22,18 @@
             <a href="/">Retour</a>
             <h1>Vos Avis</h1>
         </div>
-        <?php foreach($lesAvis as $avis){?>
+        <?php
+        if (empty($lesAvis)) {?>
+            <div id=avis>
+                <p>Aucun avis disponible</p>
+            </div>
+        <?php } else {
+         foreach($lesAvis as $avis){ ?>
             <div id=avis>
                 <p>Avis sur le restaurant : <?php echo htmlspecialchars($avis['nomR'])?></p>
                 <p><?php echo htmlspecialchars($avis['note'])?>/5</p>
                 <p><?php echo htmlspecialchars($avis['description'])?></p>
             </div>
-        <?php }?>
+        <?php }}?>
     </body>
 </html>

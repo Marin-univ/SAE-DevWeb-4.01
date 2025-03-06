@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="/public/assets/css/style.css">
+    <link rel="stylesheet" href="../../public/assets/css/connexion-inscription.css">
 </head>
 <body>
     <header>
+    <div class="header">
+        <a href="/">Retour</a>
+        <h1>Inscription</h1>
+    </div>
     </header>
     <main>
         <form method="post" action="/verfiInscription">
@@ -18,15 +22,13 @@
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required>
             <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" required>
+            <input type="password" name="password" id="new-passwd" required>
             <label for="confirm_password">Confirmer le mot de passe</label>
-            <input type="password" name="confirm_password" id="confirm_password" required>
-            <button type="submit">S'inscrire</button>
-            <button type="button" id="toggle-passwords">Afficher</button>
+            <input type="password" name="confirm_password" id="confirm-passwd" required>
+            <button type="button" name="toggle-password" id="toggle-password" class="toggle-password">afficher</button>
+            <button class="btn-inscription" type="submit">S'inscrire</button>
         </form>
     </main>
-    <footer>
-    </footer>
-    <script src="/public/assets/script/affiche_mdp.js"></script>
+    <script src="../../public/assets/js/affiche_mdp.js"></script>
 </body>
 </html>

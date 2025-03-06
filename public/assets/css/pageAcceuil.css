@@ -3,3 +3,22 @@
     height: 600px;
     background: #d6d6d6;
 }
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 100vh;
+    felx: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
