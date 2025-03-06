@@ -13,4 +13,4 @@ $chargerJSON = new GestionJSON();
 $router = new Router();
 $router->handleRequest();
 
-header("Location: src/views/acceuil.php");
+header("Location: /");
