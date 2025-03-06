@@ -10,7 +10,7 @@
     <header>
     </header>
     <main>
-        <form action="/inscription" method="post" action="/verifInscription">
+        <form method="post" action="/verfiInscription">
             <label for="nom">Nom</label>
             <input type="text" name="nom" id="nom" required>
             <label for="prenom">Prenom</label>

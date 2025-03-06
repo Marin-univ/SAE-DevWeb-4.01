@@ -20,9 +20,11 @@
             <button type="button" name="toggle-password" id="toggle-password" class="toggle-password"
                 data-target="passwd">afficher</button>
             <?php
-            if ($_SESSION['connexion_fail'] === "true") {
-                $_SESSION['connexion_fail'] = "";
-                echo "<p class='fail'>L'identifiant ou le mot de passe est incorrect</p>";
+            if (isset($_SESSION['connexion-fail'])) {
+                if ($_SESSION['connexion-fail'] === "true") {
+                    $_SESSION['connexion-fail'] = "";
+                    echo "<p class='fail'>L'identifiant ou le mot de passe est incorrect</p>";
+                }
             }?>
             <input class="btn-connexion" type="submit" value="Se connecter" />
         </form>
