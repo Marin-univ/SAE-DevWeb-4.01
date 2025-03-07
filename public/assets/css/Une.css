@@ -1,0 +1,32 @@
+#Une {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+#Une h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.restaurants-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* 2 colonnes */
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.restaurant-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.restaurant-card:hover {
+    transform: scale(1.05);
+}
