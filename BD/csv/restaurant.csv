@@ -1,0 +1,383 @@
+idR,name,siret,type
+1,Cha+,83037025000011,fast_food
+2,Freshkin,89256822100014,restaurant
+3,La Vinithèque au n°7,,bar
+4,KFC,,fast_food
+5,Crêperie bretonne,37849491800014,restaurant
+6,La Petite Folie,83970174500011,restaurant
+7,Au Brazza,89290110900017,bar
+8,LArdoise,79537510400010,restaurant
+9,Pastels,88437730000014,restaurant
+10,La Terrasse du Parc,,restaurant
+11,Chez Eugène,40520209400018,restaurant
+12,Restaurant Universitaire - LAnatidé,18450021300477,restaurant
+13,O Chicken Naan,,fast_food
+14,LAmandier,,pub
+15,Siams,35069148100021,restaurant
+16,Grec gourmand,,fast_food
+17,Polpettone,82843853100018,restaurant
+18,Before Lounge,,bar
+19,Tribs,,fast_food
+20,La Sole Dorée,84854686700013,restaurant
+21,Menphis Cofee,52264344400014,fast_food
+22,Au Coin Gourmand,83428029900019,restaurant
+23,Le Saint Vincent,88462906400020,pub
+24,Les Quatres Mains,49297224500012,restaurant
+25,Tex Mex,87916359000018,restaurant
+26,Andalucia,48506821700036,fast_food
+27,Le 147 café,91378419500012,bar
+28,Salon de thé - B Glacier,33044262500019,ice_cream
+29,Croc Express,52197899900022,fast_food
+30,LInexplosible,85017441800010,bar
+31,Victoria Pub,80482465400011,pub
+32,Planet Pizza,80313099600017,fast_food
+33,Pino Gelato,88441579500019,ice_cream
+34,Oh Terroir version Fast Good,,restaurant
+35,Le Boloye,38404634800023,restaurant
+36,Hôtel de Paris,50527259100023,bar
+37,Mosaïque,50218492200024,restaurant
+38,Café du Théatre,,restaurant
+39,La Java Pop,52297808900012,pub
+40,Indien Agra,,restaurant
+41,Best of,50316581300018,fast_food
+42,Le Petit Bouchon de la Lionne,,pub
+43,Soofresh,95284438900025,fast_food
+44,Le Orleans,85302609400013,restaurant
+45,Kantinn Grill,75083314700028,fast_food
+46,Kimme,83222504900010,restaurant
+47,Le Bistrot,42423479700050,restaurant
+48,La Provence,52843593600026,bar
+49,La maison par létoile dOr,48323598200012,restaurant
+50,Phood,,restaurant
+51,Notre Cher & Tendre,84960934200019,restaurant
+52,Lassiette gourmande,84312276300017,restaurant
+53,LAtelier,81069456200010,bar
+54,Los Gabachos,83167615000020,restaurant
+55,Bio Tea Flor,88266322200017,fast_food
+56,LAnt Hic,48493030000013,bar
+57,LArtistic,98102999400010,restaurant
+58,Pizzeria Martino,53746257400014,restaurant
+59,Bel Air,,bar
+60,Rajisthan,79490499500014,restaurant
+61,Burger du Boucher,82383893300013,restaurant
+62,Mister Tacos,,fast_food
+63,Chez Ming,38759417900013,restaurant
+64,LAntidote,,bar
+65,Le Club 15,78983585700010,bar
+66,Saint-Blaise,,pub
+67,CroustiPizz,81891378200012,fast_food
+68,Au Don Camillo,44191833100014,restaurant
+69,Châlet du steak,,restaurant
+70,Les Parasols du Parc,,fast_food
+71,Gric,95123432700017,restaurant
+72,Afyon Kebab,51031403200010,fast_food
+73,O’Gourmet,75370286900029,fast_food
+74,Bungalow Republik,90812122100018,fast_food
+75,Mojitos,82984254100015,bar
+76,Empreinte Hotel - Bar Lounge,,bar
+77,Les Pissenlits par la racine,45323793500029,restaurant
+78,Tacos et pizza express,,fast_food
+79,Chicken Hut,,restaurant
+80,Le Bateau Lavoir,88262192300011,restaurant
+81,Latelier du Burger,84462257100017,fast_food
+82,Le Charbon,93018270400013,bar
+83,OBellagio,81969162700015,fast_food
+84,Les Becs à Vin,49985417200032,bar
+85,Food factory orléans,,fast_food
+86,Au Disque Bleu,91037368700011,bar
+87,Nachos,85183046300010,fast_food
+88,Gavezzoti,85354360100019,restaurant
+89,Starbucks,,cafe
+90,Le Lièvre Gourmand,80187418100010,restaurant
+91,Havanne,,cafe
+92,Burger Station,,fast_food
+93,Escale Oceania,33487178700019,restaurant
+94,OTacos,89309113200025,fast_food
+95,Only tacos,88844815600016,restaurant
+96,La Maison Blanche,,bar
+97,Crust,85305769300014,fast_food
+98,Kali,92909692300016,fast_food
+99,Le Jardin du Pavillon,,restaurant
+100,Le Brazza,89917380100015,pub
+101,Mix,88359670200018,restaurant
+102,Chez Bambino,88053021700012,fast_food
+103,LEntracte,,restaurant
+104,O five,,fast_food
+105,Le Brin de Zinc,,restaurant
+106,Bar le Dunois,,cafe
+107,Ma-Dam,87992136900028,restaurant
+108,Le Diplomate,98133525000016,bar
+109,Rabiro chiken,88814396300013,fast_food
+110,Esco,92061452600019,bar
+111,Allo Pizza,,restaurant
+112,Le Score,,bar
+113,Le Tonnelier,49992210200011,restaurant
+114,LEscalier,84222957700023,restaurant
+115,El Tacos,82986318200012,fast_food
+116,Garden Ice Café,50085600000038,bar
+117,Le Paris,,pub
+118,La Boîte à Pizza,84990709200019,fast_food
+119,Ban Thai,,restaurant
+120,Royal Food,79150233900017,fast_food
+121,Asian Street,,restaurant
+122,Latino Café,45040995800011,cafe
+123,Osare,87757359200012,restaurant
+124,Djaam,,fast_food
+125,Aux Fines Gueules,,restaurant
+126,Moog,53143086600016,bar
+127,Madeleine,,pub
+128,Bosphorus,,fast_food
+129,C Dubs,,restaurant
+130,Ikizlere Ali Baba,48745345800019,fast_food
+131,Mon thé cristaux,81856638200011,bar
+132,Le Patio,50485382100016,fast_food
+133,Club 211,53915947500018,bar
+134,Hôtel de lAbeille,,cafe
+135,Bio Burger,92748988000025,fast_food
+136,Chez Fa,83299684700014,restaurant
+137,Bogota,,bar
+138,V&B,,bar
+139,JM Bar,92856012700013,bar
+140,Dinerspizz,,restaurant
+141,Comptoir Studio 16,90021089900010,restaurant
+142,Chicken Spot,,fast_food
+143,Volpone Ristorante,91498839900020,restaurant
+144,Le Lutétia,81540731700016,bar
+145,Subway,51323384100016,fast_food
+146,McDonalds,,fast_food
+147,Yensabai,84366784100012,fast_food
+148,Le Fournil de Coligny,82873772600012,fast_food
+149,Pizza Spot,,restaurant
+150,Le Phare St Louis,,restaurant
+151,Bes-tea,92098393900017,cafe
+152,Le Bannier,48486213100014,restaurant
+153,Funny Boy Kebab,43046814000016,fast_food
+154,JŌŌSĒ,91003594800017,bar
+155,Histoire de pains,,fast_food
+156,Le Club Café,88200666100012,bar
+157,K&JI,91978986700018,bar
+158,Quick,47986409200024,fast_food
+159,New China,40124901600031,restaurant
+160,Restaurant Universitaire Le Lac,,restaurant
+161,Sluurpit,,fast_food
+162,Solo Palma Coffee House,84156744900019,restaurant
+163,Paul et Juliette,85261622600035,restaurant
+164,Bonne Pioche,80945296400038,fast_food
+165,Le 66,83305906600013,bar
+166,Le Taj Mahal,90168960400014,restaurant
+167,Ô Ptit Mezzé,95331146100016;: 95331146100016,fast_food
+168,Troquet Royal,83971501800017,restaurant
+169,Le ptit Gavroche,,restaurant
+170,La Datcha,,bar
+171,Le petit Bar de Halles,92205362400016,bar
+172,Le Diabolo Menthe,82868876200016,bar
+173,Ooh my Cookie,92535462300017,fast_food
+174,LHibiscus,81886856400027,restaurant
+175,Au Bouillon,,restaurant
+176,La Civette,82168374500011,bar
+177,Les Terrasses du Bord de Loire,,restaurant
+178,Le Délice du Dragon dOr,,restaurant
+179,Bistro Coligny,75338459300012,bar
+180,LEtage,81047945100017,restaurant
+181,La Station,80286337300014,fast_food
+182,Lordberry Coffeeshop,,fast_food
+183,Le Vieux Comptoir,51497902000013,bar
+184,Quick & Cool,,bar
+185,OComptoir,98404480000014,fast_food
+186,O délices des Cimes,83940447200038,restaurant
+187,Brasserie de lIndien,89466346700021,restaurant
+188,Fast Burger,90251737400010,fast_food
+189,Le Chafouin,,bar
+190,Canotto,97985794300018,restaurant
+191,La Concurrence,85160771300019,restaurant
+192,Restaurant administratif,,restaurant
+193,Le Dundee,,fast_food
+194,LOrangerie,79433824400021,fast_food
+195,OChicken,,fast_food
+196,Chez Mian,84289986600011,restaurant
+197,OTacos,,fast_food
+198,LEssentiel,91430616200019,restaurant
+199,Pizzeria 4 Saisons,48270696700015,restaurant
+200,Atelier bricolage - LArcanderie,92295199100012,bar
+201,Columbus Café & Co,41382435000016,cafe
+202,Côté Sushi,,fast_food
+203,Cafétéria Le Bistrot de létudiant,,fast_food
+204,Lorchidée Chiang Maï,,restaurant
+205,Tante Jeanne,91421939900021,restaurant
+206,Le Dropkick Bar,82093594800019,bar
+207,OGrilo,80821678200025,restaurant
+208,Salon De The Cocktails Narguité,,bar
+209,Chez Dionysos,79886848500011,restaurant
+210,Gokuki coffee shop,,fast_food
+211,Le Petit Gone,49487637800014,restaurant
+212,ODelices,93039959700010,fast_food
+213,Bar la Ville de Chartres,,pub
+214,Moustache,95085937100011,ice_cream
+215,Le Gaulois,49232817400023,restaurant
+216,La Chopine,88106921500013,bar
+217,Sandwicherie du Pont Royal,85057084700010,fast_food
+218,Ramen House,88120771600013,restaurant
+219,American Food,83216755500032,fast_food
+220,Thai Food Orléans,84011059700019,fast_food
+221,Cats Eyes,90143781400014,fast_food
+222,La Petite Saison,88372439500016,restaurant
+223,Starbucks,,cafe
+224,La Chancellerie,53239595100017,cafe
+225,French Coffee Shop,80074795800018,cafe
+226,Food truck,,fast_food
+227,Restaurant Angkor,52271026800023,restaurant
+228,Paul,,restaurant
+229,Cfestin,45202793100040,restaurant
+230,El Djazair,,restaurant
+231,AfroCentre,,restaurant
+232,Paxtons,32234538000024,bar
+233,Restaurant Universitaire Guignebaud,,restaurant
+234,LAtelier Papilles,,fast_food
+235,Le bistrot de la Croix Morin,80413415300027,cafe
+236,Greenwich Café,,fast_food
+237,La Demi-Lune,81221720600018,cafe
+238,Bowling Lounge Bar Club,,bar
+239,Heureux comme Alexandre,52211336400015,restaurant
+240,Mister Tacos,79393852300024,fast_food
+241,LEtna,40906473000024,restaurant
+242,Au croc,,fast_food
+243,Neko,98436093300019,cafe
+244,Campanille,,restaurant
+245,Le Dauphin,,pub
+246,Chicken house,,fast_food
+247,Lunch Box,98316025000012,fast_food
+248,Le CentrHall,81252663000015,bar
+249,MEI,,restaurant
+250,Plaisir Phô,82929350500014,restaurant
+251,Dominos,,fast_food
+252,Blend Bistro Pub,,restaurant
+253,Best Sandwichs,48023087900037,fast_food
+254,Di Na poli,,restaurant
+255,Black and White,89397474100017,fast_food
+256,Flamme Viet,98097117000017,restaurant
+257,Qnaan fromage,88844815600016,fast_food
+258,Antoinette,88198218500012,restaurant
+259,La dernière séance,90355258600013,bar
+260,Casa Pasta,,restaurant
+261,Le Comptoir de Mamie Bigoud,83845728100015,restaurant
+262,Chez les Jacquin,80314032600015,restaurant
+263,Bar des Tribunaux,52011968600035,restaurant
+264,Le Narval,83406011300026,cafe
+265,Maestro,85344738100015,fast_food
+266,Greg,53513658400013,bar
+267,Pizzeria Le Borsalino,,fast_food
+268,Le Khédive,84966102000032,bar
+269,Le Châtelet,48162617400025,cafe
+270,SandwiChez Vous,,fast_food
+271,Blue Devils,82093594800019,bar
+272,Bagelstein,82409436100014,fast_food
+273,Il Don Vittorio,,restaurant
+274,Green Café,52817798300020,cafe
+275,Le Chien Fou,,restaurant
+276,Four Brothers,75083314700036,fast_food
+277,La Mangeoire,92012190200018,restaurant
+278,Le Sintra,84391417700012,bar
+279,HoldUp,91464043800018,fast_food
+280,M.C.C,,cafe
+281,Well in Town,90868654600015,restaurant
+282,Ver Di Vin,52953510600015,restaurant
+283,Bar des Halles,42010647800019,pub
+284,Bistrot Saint Germain,,cafe
+285,La Renaissance,40019171400015,cafe
+286,La Dariole,90959436800013,restaurant
+287,Kokoko,98181723200029,fast_food
+288,Le 222,91197719700027,restaurant
+289,Närenj,83820290100016,restaurant
+290,Au Bureau,49769672400036,restaurant
+291,Le Maroc,51471764400017,restaurant
+292,Food Side,,fast_food
+293,La Petite Italie,52110304400025,restaurant
+294,Annabi Kebab,,restaurant
+295,Delirium,,pub
+296,Lart en burger,79809990900029,fast_food
+297,La Grenouille,91424318300011,restaurant
+298,Chez moi,84214739900039,restaurant
+299,Le Rive Droite,34323880400029,restaurant
+300,La Tavola,,restaurant
+301,Sahtayn,91224130400019,restaurant
+302,Bagels Coffee,,fast_food
+303,Bombay,,restaurant
+304,Studio 16,30009501500032,pub
+305,La Fabrique,84087482000011,restaurant
+306,Al Medina,,restaurant
+307,Sushi Ninja,92852865200011,fast_food
+308,Hôtel le Tramway,82492201700010,pub
+309,Sushi Shop,53491992300019,fast_food
+310,New Antalya,45266719900015,fast_food
+311,Boci Bens,50346595700010,fast_food
+312,La Petite Absinthe,82333525200024,fast_food
+313,Bistrot de lEmpereur,53143086600016,restaurant
+314,Chez Jean Léon,87840193400012,restaurant
+315,Palazzio,,fast_food
+316,La Buvette,91083315100012,bar
+317,Ô Poudrier,,bar
+318,Chicken Spot,52079337300017,fast_food
+319,La Table DAntep,88297642600016,restaurant
+320,McDonalds,,fast_food
+321,Restaurant Angkor,52271026800023,restaurant
+322,Viaggio,,restaurant
+323,Mac Ewans,43251920500012,bar
+324,Manoir Pub,80289006100012,pub
+325,Les Fils À Maman,81224268300017,restaurant
+326,Bar Bourgogne,82190502300015,bar
+327,Le Martroi,90816684600018,pub
+328,Sable de Loire,75039349800027,fast_food
+329,Le juke bar,,bar
+330,Restaurant Universitaire Le Forum,18450021300188,restaurant
+331,LOrientale,43889918900015,restaurant
+332,Lécole des salles gosses,83855447500015,restaurant
+333,Mare Nostrum,,fast_food
+334,Dundee,79390303000021,restaurant
+335,Le Bergerac,34866083800031,bar
+336,La Pipe de Bois,90418823200014,cafe
+337,Urucum,,restaurant
+338,Grape Bar,82373748100296,bar
+339,La Boucherie,,restaurant
+340,Pokawa,98383134800013,fast_food
+341,Cuisine centrale,,restaurant
+342,Taverne,,bar
+343,Le Mangal,87788795000013,restaurant
+344,La Capitainerie,,bar
+345,Piraat Café,90419430500010,bar
+346,Le Drop,81335005500014,bar
+347,Glaces Moustache Orléans Artisan Glacier,88520057600019,ice_cream
+348,Le Calumet,50953744500033,bar
+349,Café des Beaux Arts,87945731500015,cafe
+350,La petite Mandchourie,98769657200013,fast_food
+351,LItalien,,restaurant
+352,Sandwicherie du Loiret,,fast_food
+353,Le Reinitas,91844186600012,pub
+354,Le Lift,,restaurant
+355,Stratto,,fast_food
+356,Meat,52811707000029,restaurant
+357,Kimiko,91445450900011,restaurant
+358,Yoyoshi,81914313200010,restaurant
+359,Bonne Pioche,,fast_food
+360,Papilles en herbes,84320267200013,restaurant
+361,Adalya,43018777300014,fast_food
+362,LOrient Express,53918979500013,fast_food
+363,Speed Burger,,fast_food
+364,Une Porte sur Kaboul,81943234500018,fast_food
+365,Le Key West,42160807600020,bar
+366,Les Dix Fûts,82360113300015,bar
+367,Le Bidule,83305906600021,restaurant
+368,Mijana,50264799300026,restaurant
+369,La Cantine,83917392900036,restaurant
+370,Okla,,restaurant
+371,MaGa,85204260500018,restaurant
+372,Le Fontenoy,82959922400013,pub
+373,Le cherrys,,bar
+374,LAlchimie,87810421500016,restaurant
+375,Pizza OhTerroir,,restaurant
+376,Le Petit Barcelone,83485917500020,bar
+377,Chicken Nür,,restaurant
+378,Le Xaintrailles,33921616000012,restaurant
+379,Pokesushi,88393020800011,fast_food
+380,Les Ventres Jaunes,,bar
+381,Nines Store,90407629600014,fast_food
+382,Panda Grill,,restaurant

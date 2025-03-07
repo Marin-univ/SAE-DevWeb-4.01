@@ -19,7 +19,8 @@ class Database {
             try {
                 $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
                 self::$connection = new PDO($dsn, $user, $password);
-            } catch (PDOException $e){
+                self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            } catch (PDOException $e) {
                 die("Erreur de connexion à la base de données : " . $e->getMessage());
             }
         }
