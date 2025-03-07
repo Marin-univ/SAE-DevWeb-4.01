@@ -25,7 +25,7 @@
             <input type="password" name="password" id="new-passwd" required>
             <label for="confirm_password">Confirmer le mot de passe</label>
             <input type="password" name="confirm_password" id="confirm-passwd" required>
-            <button type="button" name="toggle-password" id="toggle-password" class="toggle-password">afficher</button>
+            <button type="button" name="toggle-password" id="toggle-all-passwords" class="toggle-password">afficher</button>
             <button class="btn-inscription" type="submit">S'inscrire</button>
         </form>
     </main>
