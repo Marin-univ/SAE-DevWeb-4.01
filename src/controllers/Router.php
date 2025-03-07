@@ -37,6 +37,14 @@ class Router
                 require_once CONTROLLERS_PATH . '/suppressionCompte.php';
                 break;
 
+            case '/insertAvis':
+                require_once CONTROLLERS_PATH . '/insertAvis.php';
+                break;
+            
+            case '/AvisRestaurant':
+                require_once VIEWS_PATH . '/laisserAvis.php';
+                break;
+
             case '/page_avis':
                 require_once VIEWS_PATH . '/pageAvis.php';
                 break;
