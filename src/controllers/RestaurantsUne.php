@@ -10,16 +10,18 @@ class RestaurantsUne{
         $execution = $bd->prepare($requete);
         $execution->execute();
         $lesResto = $execution->fetchAll();
-
-        $html = '<section id="Une">
-                    <h1>Restaurants à la une</h1>';
+        $html = '<link rel="stylesheet" href="/public/assets/css/Une.css">
+                <section id="Une">
+                <h1>Restaurants à la une</h1>
+                <div class="restaurants-container">';
 
         foreach ($lesResto as $resto) {
             $restaurant = new Restaurant($resto['typeR'], $resto['nameR'], $resto['telephone'], $resto['website']);
             $html .= $restaurant->affichage();
         }
 
-        $html .= '</section>';
+        $html .= '</div></section>';
+
 
         return $html;
     }

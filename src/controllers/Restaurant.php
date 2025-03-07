@@ -16,14 +16,12 @@ class Restaurant{
     }
 
     public function affichage(){
-        $chemin_image="/public/assets/images/" . $this->type;
+        $chemin_image="/public/assets/images/" . $this->type . ".png";
         return <<<HTML
             <link rel="stylesheet" href="/public/assets/css/restaurantUnique.css">
-            <section class="section-détail-resto">
+            <section id="section-détail-resto">
                 <img id="image-resto" src="{$chemin_image}" alt="image resto">
-            </section>
-            <section class="section-détail-resto">>
-                <h3 id="texte-resto">$this->nom</h3>
+                 <h4 class="texte-resto">$this->nom</h4>
             </section>
         HTML;
     }
