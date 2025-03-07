@@ -31,7 +31,7 @@ class Database {
     {
         if (self::$connectionMysql === null) {
             try {
-                self::$connectionMysql = new \PDO('mysql:host=servinfo-maria;dbname=DBmchesneau', 'mchesneau', 'mchesneau');
+                self::$connectionMysql = new \PDO('mysql:host=localhost;dbname=DBmchesneau', 'mchesneau', 'mchesneau');
                 self::$connectionMysql->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             } catch (\PDOException $e) {
                 error_log("\n\n" . 'Erreur de connexion : ' . $e->getMessage());
