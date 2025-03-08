@@ -6,6 +6,9 @@
     <title>Avis</title>
 </head>
 <body>
+    <?php
+    include('acceuilConnecte.php');
+    ?>
     <div class="header">
         <a href="/">Retour</a>
         <h1>Laisser votre avis</h1>
