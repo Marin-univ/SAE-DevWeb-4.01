@@ -10,6 +10,7 @@ class RestaurantsUne{
         $execution = $bd->prepare($requete);
         $execution->execute();
         $lesResto = $execution->fetchAll();
+        
         $html = '<link rel="stylesheet" href="/public/assets/css/Une.css">
                 <section id="Une">
                 <h1>Restaurants à la une</h1>
