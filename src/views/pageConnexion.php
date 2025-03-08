@@ -9,7 +9,6 @@
 
 <body>
     <div class="header">
-        <a href="/">Retour</a>
         <h1>Se connecter</h1>
     </div>
     <div class="content">

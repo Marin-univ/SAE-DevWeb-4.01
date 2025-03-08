@@ -10,7 +10,6 @@
     include('headerAcceuil.php');
     ?>
     <div class="header">
-        <a href="/">Retour</a>
         <h1>Laisser votre avis</h1>
     </div>
     <div class="content">
