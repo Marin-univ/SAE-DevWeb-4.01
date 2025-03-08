@@ -7,7 +7,14 @@ class Router
 
     public function handleRequest()
     {
+        $uri = trim($_SERVER['REQUEST_URI'], '/');
 
+        if (preg_match('#^restaurant/([0-9]+)$#', $uri, $matches)) {
+            $_GET['id'] = $matches[1];
+            require_once VIEWS_PATH . '/restaurantPrecis.php';
+            return;
+        }
+    
         switch ($_SERVER['REQUEST_URI']) {
             case '/':
                 require_once VIEWS_PATH . '/acceuil.php';
@@ -52,6 +59,7 @@ class Router
             case '/page_profil':
                 require_once VIEWS_PATH . '/pageProfil.php';
                 break;
+
 
             default:
                 header("Location: /");
