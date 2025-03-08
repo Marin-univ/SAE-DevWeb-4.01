@@ -6,6 +6,9 @@
     <title>Avis</title>
 </head>
 <body>
+    <?php
+    include('headerAcceuil.php');
+    ?>
     <div class="header">
         <a href="/restaurant/<?php echo htmlspecialchars($_GET['id'] ?? ''); ?>">Retour</a>
         <h1>Laisser votre avis</h1>

@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="../../public/assets/css/connexion-inscription.css">
 </head>
 <body>
-    <header>
+
+    <?php include('headerAcceuil.php'); ?>
+
     <div class="header">
-        <a href="/">Retour</a>
         <h1>Inscription</h1>
     </div>
-    </header>
     <main>
         <form method="post" action="/verfiInscription">
             <label for="nom">Nom</label>

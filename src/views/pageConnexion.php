@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+<?php include('headerAcceuil.php'); ?>
 
 <head>
     <meta charset="utf-8">
@@ -9,10 +10,10 @@
 
 <body>
     <div class="header">
-        <a href="/">Retour</a>
         <h1>Se connecter</h1>
     </div>
     <div class="content">
+        
 
         <form class="connexion" method="POST" action="verfiCo">
             <input type="email" name="mail" id="ident" placeholder="Mail" required/>

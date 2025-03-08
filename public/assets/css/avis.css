@@ -29,7 +29,7 @@
 }
 
 /* Style des avis */
-#avis {
+.avis {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -39,20 +39,20 @@
     text-align: center;
 }
 
-#avis p {
+.avis p {
     font-size: 18px;
     margin: 10px 0;
     color: #333;
     font-weight: bold;
 }
 
-#avis p:nth-child(2) {
+.avis p:nth-child(2) {
     font-size: 20px;
     color: #ff6600;
     font-weight: bold;
 }
 
-#avis p:nth-child(3) {
+.avis p:nth-child(3) {
     font-style: italic;
     color: #555;
 }
