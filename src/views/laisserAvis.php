@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-    include('acceuilConnecte.php');
+    include('headerAcceuil.php');
     ?>
     <div class="header">
         <a href="/">Retour</a>
