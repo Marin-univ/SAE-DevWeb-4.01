@@ -14,6 +14,18 @@ class Router
             require_once VIEWS_PATH . '/restaurantPrecis.php';
             return;
         }
+
+        if (preg_match('#^restaurant/([0-9]+)/avis$#', $uri, $matches)) {
+            $_GET['id'] = $matches[1];
+            require_once VIEWS_PATH . '/laisserAvis.php'; 
+            return;
+        }
+    
+        if (preg_match('#^restaurant/([0-9]+)/favoris$#', $uri, $matches)) {
+            $_GET['id'] = $matches[1];
+            require_once VIEWS_PATH . '/favorisRestaurant.php'; 
+            return;
+        }
     
         switch ($_SERVER['REQUEST_URI']) {
             case '/':

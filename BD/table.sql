@@ -47,10 +47,6 @@ CREATE TABLE AVIS (
   CONSTRAINT FOREIGN KEY (idU) REFERENCES USERS(idU) ON DELETE CASCADE
 );
 
-INSERT INTO USERS (nomU, prenomU, mailU, typeU, mdp) 
-VALUES ('fonteny', 'noa', 'n@f', 'admin', 'admin');
-
-
 -- Création de la partie Restaurant
 CREATE TABLE GEO_POINT (
   idR INT NOT NULL,

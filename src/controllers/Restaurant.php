@@ -1,6 +1,8 @@
 <?php 
 namespace src\controllers;
 
+use PDO;
+
 class Restaurant{
     public $id;
     public $type;
@@ -28,15 +30,30 @@ class Restaurant{
         HTML;
     }
 
-    public function affichagePrecis($estConnecte) {
+    public function affichagePrecis($estConnecte, $bdd) {
         $chemin_image = "/public/assets/images/" . $this->type . ".png";
         $boutons = "";
 
-        if ($estConnecte) {
+        $selectAvis = $bdd->prepare('SELECT * FROM AVIS WHERE idU=:idU AND idR=:idR');
+        $selectAvis->bindParam(":idU", $_SESSION["id"], PDO::PARAM_INT);
+        $selectAvis->bindParam(":idR", $this->id, PDO::PARAM_INT);
+        $selectAvis->execute();
+        $testAvis = $selectAvis->fetch();
+
+        $testPresent = isset($testAvis['idU']) && isset($testAvis['idR']);
+
+        if ($estConnecte && !$testPresent) {
             $boutons = <<<HTML
                 <div class="btn-container">
-                    <button class="btn-avis">Laisser un avis</button>
-                    <button class="btn-favoris">Ajouter aux favoris</button>
+                    <a href="/restaurant/{$this->id}/avis" class="btn-avis">Laisser un avis</a>
+                    <a href="/restaurant/{$this->id}/favoris" class="btn-favoris">Ajouter aux favoris</a>
+                </div>
+            HTML;
+        } elseif ($estConnecte && $testPresent) {
+            $boutons = <<<HTML
+                <div class="btn-container">
+                    <a href="/page_avis" class="btn-avis">Modifier mon avis</a>
+                    <a href="/restaurant/{$this->id}/favoris" class="btn-favoris">Ajouter aux favoris</a>
                 </div>
             HTML;
         }
