@@ -6,17 +6,15 @@
     <title>Avis</title>
 </head>
 <body>
-    <?php
-    include('headerAcceuil.php');
-    ?>
     <div class="header">
+        <a href="/restaurant/<?php echo htmlspecialchars($_GET['id'] ?? ''); ?>">Retour</a>
         <h1>Laisser votre avis</h1>
     </div>
     <div class="content">
-        <form class="connexion" method="POST" action="insertAvis">
-            <input type="hidden" id="idR" value="<?php $_POST["idR"]; ?>">
+        <form class="connexion" method="POST" action="/insertAvis">
+            <input type="hidden" name="idR" value="<?php echo htmlspecialchars($_GET['id'] ?? null); ?>">
             <label for="note">Notes (entre 0 et 5) :</label>
-            <input type="number" id="note" min="0" max="5" value="0">
+            <input type="number" name="note" id="note" min="0" max="5" value="0">
             <label for="com"> Laisser votre commentaire (255 caractères maximum) :</label>
             <textarea type="textaera" maxlength="255" name="com" id="com" placeholder="commentaire"></textarea>
             <?php
