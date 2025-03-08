@@ -18,9 +18,7 @@
             $InfoUser->execute();
             $lesInfos  = $InfoUser->fetch();
 
-        include('headerAcceuil.php');
-
-
+            include('headerAcceuil.php');
         ?>
         <div class="header">
             <h1>Votre Profil</h1>

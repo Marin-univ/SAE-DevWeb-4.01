@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Vos Avis</title>
-        <link rel="stylesheet" href="../../public/assets/css/avis.css">
+        <link rel="stylesheet" href="/public/assets/css/avis.css">
     </head>
     <body>
         <?php
@@ -18,20 +18,20 @@
             $Avis->execute();
             $lesAvis = $Avis->fetchAll();
 
-
             include('headerAcceuil.php');
+            
         ?>
         <div class="header">
             <h1>Vos Avis</h1>
         </div>
         <?php
         if (empty($lesAvis)) {?>
-            <div id=avis>
+            <div class=avis>
                 <p>Aucun avis disponible</p>
             </div>
         <?php } else {
          foreach($lesAvis as $avis){ ?>
-            <div id=avis>
+            <div class=avis>
                 <p>Avis sur le restaurant : <?php echo htmlspecialchars($avis['nameR'])?></p>
                 <p><?php echo htmlspecialchars($avis['note'])?>/5</p>
                 <?php if (is_null($avis['description'])) {?>
@@ -42,4 +42,4 @@
             </div>
         <?php }}?>
     </body>
-</html>
+</html> 
