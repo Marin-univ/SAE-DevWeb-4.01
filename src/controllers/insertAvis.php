@@ -15,7 +15,7 @@ if (!empty($idR) && !empty($idU) && !empty($note)) {
     $testAvis = $selectAvis->fetch();
 
     if (empty($testAvis)) {
-        $insertAvis = $bdd->prepare('INSERT INTO AVIS VALUES (:idU, :idR, :note, :com)');
+        $insertAvis = $bdd->prepare('INSERT INTO AVIS (idU, idR, note, description, dateA ) VALUES (:idU, :idR, :note, :com, CURRENT_TIMESTAMP)');
         $insertAvis->bindParam(":idU", $idU, PDO::PARAM_INT);
         $insertAvis->bindParam(":idR", $idR, PDO::PARAM_INT);
         $insertAvis->bindParam(":note", $note, PDO::PARAM_INT);

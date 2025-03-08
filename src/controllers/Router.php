@@ -72,6 +72,17 @@ class Router
                 require_once VIEWS_PATH . '/pageProfil.php';
                 break;
 
+            case '/supprAvis':
+                require_once CONTROLLERS_PATH . '/suppressionAvis.php';
+                break;
+
+            case '/modifAvis':
+                require_once VIEWS_PATH . '/modificationAvis.php';
+                break;
+
+            case '/modifAvisController':
+                require_once CONTROLLERS_PATH . '/modificationAvisCrtl.php';
+                break;
 
             default:
                 header("Location: /");

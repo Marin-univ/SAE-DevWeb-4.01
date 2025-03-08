@@ -98,7 +98,6 @@ a:hover {
     text-align: center;
 }
 
-/* Responsivité */
 @media (max-width: 768px) {
     #section-detail-resto {
         flex-direction: column;

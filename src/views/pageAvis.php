@@ -13,7 +13,7 @@
             $mail = $_SESSION["mail"];
             $idU = $_SESSION["id"];
 
-            $Avis = $bdd->prepare('SELECT * FROM AVIS NATURAL JOIN RESTAURANT WHERE idU=:id');
+            $Avis = $bdd->prepare('SELECT * FROM AVIS NATURAL JOIN RESTAURANT WHERE idU=:id ORDER BY dateA');
             $Avis->bindParam(":id", $idU, PDO::PARAM_STR);
             $Avis->execute();
             $lesAvis = $Avis->fetchAll();
@@ -37,6 +37,17 @@
                 } else { ?>
                     <p><?php echo htmlspecialchars($avis['description'])?></p>
                 <?php }?>
+                <form action="/modifAvis" method="POST">
+                    <input type="hidden" name="idU" value="<?php echo $idU; ?>">
+                    <input type="hidden" name="idR" value="<?php echo $avis['idR']; ?>">
+                    <button class="btnAvis" type="submit">Modifier</button>
+                </form>
+
+                <form action="/supprAvis" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer cet avis ?');">
+                    <input type="hidden" name="idU" value="<?php echo $idU; ?>">
+                    <input type="hidden" name="idR" value="<?php echo $avis['idR']; ?>">
+                    <button class="btnAvis" type="submit">Supprimer</button>
+                </form>
             </div>
         <?php }}?>
     </body>
