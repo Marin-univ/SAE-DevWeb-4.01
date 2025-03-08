@@ -1,10 +1,10 @@
-#Une {
+#Une,#FY {
     max-width: 1200px;
     margin: auto;
     padding: 20px;
 }
 
-#Une h1 {
+#Une h1,#FY h1 {
     font-size: 32px;
     margin-bottom: 20px;
     color: #333;

@@ -6,7 +6,7 @@ use src\controllers\Restaurant;
 class RestaurantsUne{
     public static function affichage(){
         $bd = Database::getMysqlConnection();
-        $requete = "SELECT typeR, nameR, telephone, website FROM RESTAURANT NATURAL JOIN AVIS NATURAL JOIN CONTACT GROUP BY idR ORDER BY AVG(note) DESC LIMIT 4";
+        $requete = "SELECT typeR, nameR, telephone, website FROM RESTAURANT NATURAL JOIN AVIS NATURAL JOIN CONTACT GROUP BY idR, nameR, typeR ORDER BY AVG(note) DESC LIMIT 4";
         $execution = $bd->prepare($requete);
         $execution->execute();
         $lesResto = $execution->fetchAll();
