@@ -7,7 +7,26 @@ class Router
 
     public function handleRequest()
     {
+        $uri = trim($_SERVER['REQUEST_URI'], '/');
 
+        if (preg_match('#^restaurant/([0-9]+)$#', $uri, $matches)) {
+            $_GET['id'] = $matches[1];
+            require_once VIEWS_PATH . '/restaurantPrecis.php';
+            return;
+        }
+
+        if (preg_match('#^restaurant/([0-9]+)/avis$#', $uri, $matches)) {
+            $_GET['id'] = $matches[1];
+            require_once VIEWS_PATH . '/laisserAvis.php'; 
+            return;
+        }
+    
+        if (preg_match('#^restaurant/([0-9]+)/favoris$#', $uri, $matches)) {
+            $_GET['id'] = $matches[1];
+            require_once VIEWS_PATH . '/favorisRestaurant.php'; 
+            return;
+        }
+    
         switch ($_SERVER['REQUEST_URI']) {
             case '/':
                 require_once VIEWS_PATH . '/acceuil.php';
@@ -51,6 +70,18 @@ class Router
 
             case '/page_profil':
                 require_once VIEWS_PATH . '/pageProfil.php';
+                break;
+
+            case '/supprAvis':
+                require_once CONTROLLERS_PATH . '/suppressionAvis.php';
+                break;
+
+            case '/modifAvis':
+                require_once VIEWS_PATH . '/modificationAvis.php';
+                break;
+
+            case '/modifAvisController':
+                require_once CONTROLLERS_PATH . '/modificationAvisCrtl.php';
                 break;
 
             default:
