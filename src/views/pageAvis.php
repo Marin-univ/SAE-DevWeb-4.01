@@ -30,9 +30,13 @@
         <?php } else {
          foreach($lesAvis as $avis){ ?>
             <div id=avis>
-                <p>Avis sur le restaurant : <?php echo htmlspecialchars($avis['nomR'])?></p>
+                <p>Avis sur le restaurant : <?php echo htmlspecialchars($avis['nameR'])?></p>
                 <p><?php echo htmlspecialchars($avis['note'])?>/5</p>
-                <p><?php echo htmlspecialchars($avis['description'])?></p>
+                <?php if (is_null($avis['description'])) {?>
+                    <p>Aucun commentaire.</p><?php
+                } else { ?>
+                    <p><?php echo htmlspecialchars($avis['description'])?></p>
+                <?php }?>
             </div>
         <?php }}?>
     </body>
