@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="../../public/assets/css/connexion-inscription.css">
 </head>
 <body>
+
+    <?php include('headerAcceuil.php'); ?>
+
     <header>
     <div class="header">
-        <a href="/">Retour</a>
         <h1>Inscription</h1>
     </div>
     </header>

@@ -17,9 +17,11 @@
             $Avis->bindParam(":id", $idU, PDO::PARAM_STR);
             $Avis->execute();
             $lesAvis = $Avis->fetchAll();
+
+
+            include('headerAcceuil.php');
         ?>
         <div class="header">
-            <a href="/">Retour</a>
             <h1>Vos Avis</h1>
         </div>
         <?php

@@ -7,6 +7,7 @@
     </head>
     <body>
         <?php
+
             use src\controllers\Database;
             $bdd = Database::getMysqlConnection();
 
@@ -17,9 +18,11 @@
             $InfoUser->execute();
             $lesInfos  = $InfoUser->fetch();
 
+        include('headerAcceuil.php');
+
+
         ?>
         <div class="header">
-            <a href="/">Retour</a>
             <h1>Votre Profil</h1>
         </div>
         <div id=profil>
