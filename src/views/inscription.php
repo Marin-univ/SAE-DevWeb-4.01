@@ -10,11 +10,9 @@
 
     <?php include('headerAcceuil.php'); ?>
 
-    <header>
     <div class="header">
         <h1>Inscription</h1>
     </div>
-    </header>
     <main>
         <form method="post" action="/verfiInscription">
             <label for="nom">Nom</label>
