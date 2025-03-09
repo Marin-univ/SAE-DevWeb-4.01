@@ -124,7 +124,7 @@ class Restaurant{
 
     
         return <<<HTML
-            <link rel="stylesheet" href="/public/assets/css/restaurantUnique.css">
+            <link rel="stylesheet" href="/public/assets/css/restaurantDetails.css">
             <section id="section-detail-resto">
                 <section id="infoResto">
                     <img id="image-resto" src="{$chemin_image}" alt="image du restaurant">
