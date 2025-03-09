@@ -49,4 +49,5 @@ $restaurant = new Restaurant($id, $type, $nom, $phone, $website);
     </main>
     
 </body>
+<?php include('footer.php');?>
 </html>

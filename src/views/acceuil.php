@@ -26,9 +26,11 @@ use src\controllers\Map;
 
         if(isset($_SESSION["id"])){
             include('acceuilConnecte.php');
+        } else {
+            include('footer.php');
         }
         ?>
     </main>
-    
 </body>
+
 </html>

@@ -59,6 +59,7 @@ class Restaurant{
             $boutonsAvis = <<<HTML
                 <form action="/modifAvis" method="POST">
                     <input type="hidden" name="idR" id="idR" value="{$this->id}">
+                    <input type="hidden" name="resto" id="resto" value="resto">
                     <button type="submit" class="btn-avis">Modifier mon avis</button>
                 </form>
             HTML;

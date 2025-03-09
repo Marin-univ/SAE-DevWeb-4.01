@@ -5,4 +5,5 @@ use src\controllers\Favoris;
 
 echo ForYou::affichage();
 echo Favoris::affichage();
+include('footer.php');
 ?>

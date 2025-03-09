@@ -112,17 +112,18 @@ nav ul li a:hover {
     background-color: #ff6600;
 }
 
-/* 🔹 Ajustement du conteneur de la barre de recherche */
+footer {
+    margin-top: auto;
+}
+
 .search-container {
     display: flex;
     align-items: center;
     gap: 10px;
-    position: relative; /* Permet d'afficher correctement les résultats */
-    flex-grow: 1; /* Permet de mieux centrer la barre */
+    position: relative;
+    flex-grow: 1;
 }
 
 a{
     text-decoration: none;
 }
-
-

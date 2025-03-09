@@ -148,3 +148,7 @@ form label {
     margin-top: 10px;
     text-align: center;
 }
+
+footer {
+    margin-top: auto;
+}

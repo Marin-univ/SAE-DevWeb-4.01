@@ -30,3 +30,7 @@
 .restaurant-card:hover {
     transform: scale(1.05);
 }
+
+footer {
+    margin-top: auto;
+}
