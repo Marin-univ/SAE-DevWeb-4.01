@@ -6,7 +6,7 @@ use src\controllers\Restaurant;
 class RestaurantsUne{
     public static function affichage(){
         $bd = Database::getMysqlConnection();
-        $requete = "SELECT idR, typeR, nameR, telephone, website, website FROM RESTAURANT NATURAL JOIN AVIS NATURAL JOIN CONTACT WHERE dateA >= CURDATE() - INTERVAL 7 DAY GROUP BY idR ORDER BY AVG(note) DESC LIMIT 4;";
+        $requete = "SELECT idR, typeR, nameR, telephone, website FROM RESTAURANT NATURAL JOIN AVIS NATURAL JOIN CONTACT WHERE dateA >= CURDATE() - INTERVAL 7 DAY GROUP BY idR HAVING AVG(note) >= 3 ORDER BY AVG(note) DESC LIMIT 4;";
         $execution = $bd->prepare($requete);
         $execution->execute();
         $lesResto = $execution->fetchAll();
