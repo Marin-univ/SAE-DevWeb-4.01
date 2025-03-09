@@ -4,7 +4,7 @@
     <div class="footer-container">
         <div class="footer-section">
             <h3>À propos</h3>
-            <p>Site dévelopés par Noa Fonteny - Marin Chesneau - Kylian Carrat - Jules Gruson-Delannoy, dans le cadre d'une SAE(4.01).</p>
+            <p>Site dévelopés par Noa Fonteny - Marin Chesneau - Killian Carrat - Jules Gruson-Delannoy, dans le cadre d'une SAE(4.01).</p>
         </div>
         <div class="footer-section">
             <h3>Contact IUT Orléans</h3>
