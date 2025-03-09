@@ -1,79 +1,54 @@
 * {
     margin: 0;
-    padding: 0;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
-    min-height: 100vh;
-}
-
-main {
-    flex-grow: 1;
+.header {
+    margin: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Arial, sans-serif;
 }
 
-#section-detail-resto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.header a {
+    align-self: flex-start;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
 }
 
-#infoResto {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1000px;
+.header a:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    font-weight: bold;
 }
 
-#image-resto {
-    width: 800px; /* Taille de l'image agrandie */
-    height: auto;
-    margin-right: 20px;
-    margin-left: 0; /* L'image est plus à gauche */
+.header h1 {
+    color: black;
+    font-size: 28px;
 }
 
-.infos-resto {
-    flex-grow: 1;
-}
-
-.avisR {
+/* Style des avis */
+.avis {
     max-width: 600px;
-    width: 100%;
-    margin: 30px auto;
+    margin: 20px auto;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    flex-shrink: 0;
-}
-
-.avisR h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.avis {
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .avis p {
     font-size: 18px;
+    margin: 10px 0;
     color: #333;
+    font-weight: bold;
 }
 
 .avis p:nth-child(2) {
@@ -104,11 +79,22 @@ main {
     background-color: #333;
 }
 
+form {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
 footer {
     width: 100%;
     margin-top: auto;
     padding: 20px;
-    background-color: #f1f1f1;
-    text-align: center;
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
 }
