@@ -3,7 +3,7 @@ namespace src\controllers;
 class ForYou{
     public static function affichage(){
         $bd = Database::getMysqlConnection();
-        $requete = "SELECT typeR, nameR, telephone, website FROM RESTAURANT  NATURAL JOIN USERS NATURAL JOIN AVIS NATURAL JOIN CONTACT WHERE idU=:id  GROUP BY idR, nameR, typeR ORDER BY note DESC LIMIT 4";
+        $requete = "SELECT * FROM RESTAURANT  NATURAL JOIN USERS NATURAL JOIN AVIS NATURAL JOIN CONTACT WHERE idU=:id  GROUP BY idR, nameR, typeR ORDER BY note DESC LIMIT 4";
         $execution = $bd->prepare($requete);
         $execution->bindParam(":id",$_SESSION["id"]);
         $execution->execute();
@@ -17,7 +17,7 @@ class ForYou{
                     <div class="restaurants-container">';
 
             foreach ($lesResto as $resto) {
-                $restaurant = new Restaurant($resto['typeR'], $resto['nameR'], $resto['telephone'], $resto['website']);
+                $restaurant = new Restaurant($resto["idR"], $resto['typeR'], $resto['nameR'], $resto['telephone'], $resto['website']);
                 $html .= $restaurant->affichage();
             }
 

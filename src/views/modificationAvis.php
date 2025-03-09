@@ -17,8 +17,8 @@ if (!$avis) {
     exit;
 }
 
-$note = htmlspecialchars($avis['note']);
-$description = htmlspecialchars($avis['description']);
+$note = htmlspecialchars($avis['note'] ?? 0);
+$description = htmlspecialchars($avis['description'] ?? "");
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ $description = htmlspecialchars($avis['description']);
 </head>
 <body>
     <div class="header">
-        <a href="/restaurant/<?php echo htmlspecialchars($idR); ?>">Retour</a>
+        <a href="/page_avis">Retour</a>
         <h1>Modifier votre avis</h1>
     </div>
     <div class="content">
