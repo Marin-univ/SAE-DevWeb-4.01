@@ -13,8 +13,8 @@
     <div class="content">
         <form class="connexion" method="POST" action="/insertAvis">
             <input type="hidden" name="idR" value="<?php echo htmlspecialchars($_GET['id'] ?? null); ?>">
-            <label for="note">Notes (entre 0 et 5) :</label>
-            <input type="number" name="note" id="note" min="0" max="5" value="0">
+            <label for="note">Notes (entre 1 et 5) :</label>
+            <input type="number" name="note" id="note" min="1" max="5" value="5">
             <label for="com"> Laisser votre commentaire (255 caractères maximum) :</label>
             <textarea type="textaera" maxlength="255" name="com" id="com" placeholder="commentaire"></textarea>
             <?php

@@ -41,8 +41,8 @@ $description = htmlspecialchars($avis['description'] ?? "");
         <form class="connexion" method="POST" action="/modifAvisController">
             <input type="hidden" name="idR" value="<?php echo $idR; ?>">
             
-            <label for="note">Notes (entre 0 et 5) :</label>
-            <input type="number" name="note" id="note" min="0" max="5" value="<?php echo $note; ?>">
+            <label for="note">Notes (entre 1 et 5) :</label>
+            <input type="number" name="note" id="note" min="1" max="5" value="<?php echo $note; ?>">
 
             <label for="com">Modifier votre commentaire (255 caractères maximum) :</label>
             <textarea maxlength="255" name="com" id="com" placeholder="commentaire"><?php echo $description; ?></textarea>
