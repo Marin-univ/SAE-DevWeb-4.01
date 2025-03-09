@@ -11,8 +11,9 @@
     <header id="header">
         <div class="top-bar">
             <div>
-                <input type="search" id="Barre de recherche">
-                <button>Recherche</button>
+                <input type="search" id="searchBar" placeholder="Rechercher un restaurant...">
+                <button id="searchButton">Recherche</button>
+                <div id="results"></div>
             </div>
             <div class="buttons">
                 <?php
@@ -42,5 +43,5 @@
     </header>
 
 </body>
-
+<script src="/public/assets/js/barre.js"></script>
 </html>
