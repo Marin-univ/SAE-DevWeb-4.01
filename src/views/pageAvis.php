@@ -10,7 +10,6 @@
             use src\controllers\Database;
             $bdd = Database::getMysqlConnection();
 
-            $mail = $_SESSION["mail"];
             $idU = $_SESSION["id"];
 
             $Avis = $bdd->prepare('SELECT * FROM AVIS NATURAL JOIN RESTAURANT WHERE idU=:id ORDER BY dateA');

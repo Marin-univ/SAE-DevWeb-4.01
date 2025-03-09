@@ -29,7 +29,9 @@
             <p>mail : <?php echo htmlspecialchars($lesInfos['mailU'])?></p>
             <div class="buttons-container">
                 <button id="deco" onclick="window.location.href='/deconnexion'">se deconnecter</button>
-                <button id="supr" onclick="window.location.href='/suppressionCompte'">supprimer mon compte</button>
+                <form action="/SuppressionCompte" method="POST" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer votre compte ? Cette action est irréversible.')">
+                    <button type="submit" id="supr">Supprimer mon compte</button>
+                </form>
             </div>
         </div>
     </body>

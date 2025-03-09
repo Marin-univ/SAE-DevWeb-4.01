@@ -10,7 +10,7 @@ document.getElementById("searchButton").addEventListener("click", function() {
                 return response.text();
             })
             .then(data => {
-                document.getElementById("results").innerHTML = data; // Affichage des résultats
+                document.getElementById("results").innerHTML = data;
             })
             .catch(error => console.error("Erreur :", error));
     }

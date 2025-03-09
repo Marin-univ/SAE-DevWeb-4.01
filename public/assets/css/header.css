@@ -46,7 +46,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s ease-in-out, transform 0.2s;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -103,7 +102,6 @@ nav ul li a {
     font-size: 18px;
     font-weight: bold;
     padding: 10px 15px;
-    transition: color 0.3s ease-in-out, background 0.3s;
     border-radius: 5px;
 }
 
@@ -128,16 +126,13 @@ a{
     text-decoration: none;
 }
 
-
 .top-bar > div:first-child {
     position: relative;
 }
 
-
 #searchButton {
     margin-left: 5px;
 }
-
 
 #results {
     position: absolute;
@@ -155,11 +150,9 @@ a{
     display: none; 
 }
 
-
 #results:not(:empty) {
     display: block;
 }
-
 
 #results a {
     display: block;
@@ -168,7 +161,6 @@ a{
     text-decoration: none;
     color: #333;
 }
-
 
 #results a:hover {
     background-color: #f0f0f0;

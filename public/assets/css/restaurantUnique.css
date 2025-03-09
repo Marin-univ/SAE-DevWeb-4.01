@@ -11,7 +11,7 @@
 
 #image-resto {
     width: 100%;
-    max-width: 800px; /* Taille max de l'image */
+    max-width: 800px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
