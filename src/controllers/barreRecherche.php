@@ -4,7 +4,7 @@ namespace src\controllers;
 require_once __DIR__ . "/Database.php";
 use src\controllers\Database;
 
-if (isset($_GET["rechercge"])) {
+if (isset($_GET["recherche"])) {
     $search = htmlspecialchars($_GET["recherche"]); 
     $search = "%$search%"; 
 
