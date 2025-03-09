@@ -30,7 +30,11 @@ $description = htmlspecialchars($avis['description'] ?? "");
 </head>
 <body>
     <div class="header">
-        <a href="/page_avis">Retour</a>
+        <?php if (isset($_POST['resto'])) { ?>
+            <a href="/restaurant/<?php echo htmlspecialchars($_POST['idR'] ?? ''); ?>">Retour</a>
+        <?php } else { ?>
+            <a href="/page_avis">Retour</a>
+        <?php }?>
         <h1>Modifier votre avis</h1>
     </div>
     <div class="content">
