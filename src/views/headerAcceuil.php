@@ -30,12 +30,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="Plan">Plan des restaurants</a></li>
-                <li><a href="Une">Restaurants à la une</a></li>
+                <li><a href="/#Plan">Plan des restaurants</a></li>
+                <li><a href="/#Une">Restaurants à la une</a></li>
                 <?php
                 if ($id != null) { ?>
-                    <li><a href="Favoris">Restaurants favoris</a></li>
-                    <li><a href="FY">Pour vous</a></li>
+                    <li><a href="/#FY">Pour vous</a></li>
+                    <li><a href="/#Favoris">Restaurants favoris</a></li>
                 <?php } ?>
                 <li><a href="Perso">Nos infos</a></li>
             </ul>
