@@ -11,7 +11,7 @@ if (!isset($_GET['id'])) {
 
 $id = intval($_GET['id']);
 
-$query = $bdd->prepare("SELECT * FROM RESTAURANT WHERE idR = :id");
+$query = $bdd->prepare("SELECT idR,typeR,nameR,telephone,website FROM RESTAURANT NATURAL JOIN CONTACT WHERE idR = :id");
 $query->bindParam(":id", $id, PDO::PARAM_INT);
 $query->execute();
 $restaurantData = $query->fetch();
@@ -21,10 +21,10 @@ if (!$restaurantData) {
     exit;
 }
 
-$nom = htmlspecialchars($restaurantData['nameR']) ?? "";
-$type = htmlspecialchars($restaurantData['typeR']) ?? "";
-$phone = htmlspecialchars($restaurantData['telephone'] ?? "Non spécifié");
-$website = htmlspecialchars($restaurantData['website'] ?? "Non spécifié");
+$nom = htmlspecialchars($restaurantData['nameR']) ?: "";
+$type = htmlspecialchars($restaurantData['typeR']) ?: "";
+$phone = htmlspecialchars($restaurantData['telephone'] ?: "Non spécifié");
+$website = htmlspecialchars($restaurantData['website'] ?: "Non spécifié");
 $estConnecte = isset($_SESSION["id"]);
 
 $restaurant = new Restaurant($id, $type, $nom, $phone, $website);
