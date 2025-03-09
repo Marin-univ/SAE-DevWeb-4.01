@@ -47,4 +47,5 @@ $description = htmlspecialchars($avis['description'] ?? "");
         </form>
     </div>
 </body>
+<?php include('footer.php');?>
 </html>

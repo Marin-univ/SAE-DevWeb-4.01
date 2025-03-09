@@ -111,3 +111,7 @@ nav ul li a:hover {
     color: white;
     background-color: #ff6600;
 }
+
+footer {
+    margin-top: auto;
+}
