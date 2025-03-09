@@ -115,3 +115,15 @@ nav ul li a:hover {
 footer {
     margin-top: auto;
 }
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    flex-grow: 1;
+}
+
+a{
+    text-decoration: none;
+}

@@ -22,11 +22,12 @@ class Restaurant{
         $chemin_image="/public/assets/images/" . $this->type . ".png";
         return <<<HTML
             <link rel="stylesheet" href="/public/assets/css/restaurantUnique.css">
-            <section id="section-détail-resto">
-                <img id="image-resto" src="{$chemin_image}" alt="image resto">
-                <h4 class="texte-resto">$this->nom</h4>
-                <a href="/restaurant/{$this->id}" class="btn-details">Voir plus</a>
-            </section>
+            <a href="/restaurant/{$this->id}" class="btn-details">
+                <section id="section-détail-resto">
+                    <img id="image-resto" src="{$chemin_image}" alt="image resto">
+                    <h4 class="texte-resto">$this->nom</h4>
+                </section>
+            </a>
         HTML;
     }
 

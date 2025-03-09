@@ -11,8 +11,9 @@
     <header id="header">
         <div class="top-bar">
             <div>
-                <input type="search" id="Barre de recherche">
-                <button>Recherche</button>
+                <input type="search" id="searchBar" placeholder="Rechercher un restaurant...">
+                <button id="searchButton">Recherche</button>
+                <div id="results"></div>
             </div>
             <div class="buttons">
                 <?php
@@ -29,12 +30,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="Plan">Plan des restaurants</a></li>
-                <li><a href="Une">Restaurants à la une</a></li>
+                <li><a href="/#Plan">Plan des restaurants</a></li>
+                <li><a href="/#Une">Restaurants à la une</a></li>
                 <?php
                 if ($id != null) { ?>
-                    <li><a href="Favoris">Restaurants favoris</a></li>
-                    <li><a href="FY">Pour vous</a></li>
+                    <li><a href="/#FY">Pour vous</a></li>
+                    <li><a href="/#Favoris">Restaurants favoris</a></li>
                 <?php } ?>
                 <li><a href="Perso">Nos infos</a></li>
             </ul>
@@ -42,5 +43,5 @@
     </header>
 
 </body>
-
+<script src="/public/assets/js/barre.js"></script>
 </html>
