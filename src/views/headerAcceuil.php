@@ -37,7 +37,6 @@
                     <li><a href="/#FY">Pour vous</a></li>
                     <li><a href="/#Favoris">Restaurants favoris</a></li>
                 <?php } ?>
-                <li><a href="Perso">Nos infos</a></li>
             </ul>
         </nav>
     </header>
