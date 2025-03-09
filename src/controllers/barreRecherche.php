@@ -4,18 +4,16 @@ namespace src\controllers;
 require_once __DIR__ . "/Database.php";
 use src\controllers\Database;
 
-if (isset($_GET["q"])) {
-    $search = htmlspecialchars($_GET["q"]); 
+if (isset($_GET["recherche"])) {
+    $search = htmlspecialchars($_GET["recherche"]); 
     $search = "%$search%"; 
 
     $bd = Database::getMysqlConnection();
 
-
-    $query = $bd->prepare("SELECT idR,nameR FROM RESTAURANT WHERE nameR LIKE :search LIMIT 6" );
-    $query->bindParam(":search",$search);
-    $query->execute();
-
-    $results = $query->fetchAll();
+    $requete = $bd->prepare("SELECT idR,nameR FROM RESTAURANT WHERE nameR LIKE :search LIMIT 6" );
+    $requete->bindParam(":search",$search);
+    $requete->execute();
+    $results = $requete->fetchAll();
 
     if ($results) {
         foreach ($results as $restaurant) {
@@ -25,4 +23,4 @@ if (isset($_GET["q"])) {
         echo "<p>Aucun résultat trouvé.</p>";
     }
 }
-?>
+

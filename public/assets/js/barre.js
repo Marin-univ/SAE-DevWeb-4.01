@@ -2,7 +2,7 @@ document.getElementById("searchButton").addEventListener("click", function() {
     let searchQuery = document.getElementById("searchBar").value;
 
     if (searchQuery.trim() !== "") {
-        fetch("../../../src/controllers/barreRecherche.php?q=" + encodeURIComponent(searchQuery))
+        fetch("../../../src/controllers/barreRecherche.php?recherche=" + encodeURIComponent(searchQuery))
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Erreur réseau !");
@@ -10,7 +10,7 @@ document.getElementById("searchButton").addEventListener("click", function() {
                 return response.text();
             })
             .then(data => {
-                document.getElementById("results").innerHTML = data; // Affichage des résultats
+                document.getElementById("results").innerHTML = data;
             })
             .catch(error => console.error("Erreur :", error));
     }

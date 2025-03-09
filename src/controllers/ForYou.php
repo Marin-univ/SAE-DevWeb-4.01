@@ -17,9 +17,7 @@ class ForYou{
                     <div class="restaurants-container">';
 
             foreach ($lesResto as $resto) {
-
                 $restaurant = new Restaurant($resto['idR'], $resto['typeR'], $resto['nameR'], $resto['telephone'], $resto['website']);
-
                 $html .= $restaurant->affichage();
             }
 
