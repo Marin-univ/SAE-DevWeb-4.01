@@ -71,6 +71,17 @@ GRANT ALL PRIVILEGES ON *.* TO 'mchesneau'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ```
 
+### Sortir de mysql
+```bash
+EXIT;
+```
+
+### Se connecter en tant que mchesneau
+```bash
+mysql -u mchesneau -p
+```
+Il faut rentrer le mot de passe initialisé un peu plus tôt
+
 ### Supprimer l'utilisateur `root`
 
 ```bash
