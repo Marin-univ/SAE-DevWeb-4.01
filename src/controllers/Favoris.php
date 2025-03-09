@@ -18,7 +18,7 @@ class Favoris{
         }
         else{
             foreach ($lesResto as $resto) {
-                $restaurant = new Restaurant($resto['typeR'], $resto['nameR'], $resto['telephone'], $resto['website']);
+                $restaurant = new Restaurant($resto['idR'], $resto['typeR'], $resto['nameR'], $resto['telephone'], $resto['website']);
                 $html .= $restaurant->affichage();
             }
         }
