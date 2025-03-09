@@ -1,5 +1,12 @@
 # IUTables’O - SAE 4.01 Développement Web PHP
 
+## EQUIPE
+
+- Noa FONTENY
+- Marin CHESNEAU
+- Killian CARRAT
+- Jules GRUSON-DELANNOY
+
 ## Description du projet
 
 IUTables’O est une application web qui permet de gérer et visualiser des restaurants à Orléans. Ce projet permet aux utilisateurs de rechercher des restaurants, de laisser des critiques, de noter des restaurants et d'accéder à des informations détaillées. Le site propose un module d'authentification pour les utilisateurs et permet de gérer des critiques avec des fonctionnalités étendues pour les utilisateurs enregistrés.
