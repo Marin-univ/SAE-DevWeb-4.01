@@ -94,24 +94,33 @@ class Restaurant{
         $avisR = $selectAvisR->fetchAll();
 
         $avisresto = "";
-        foreach ($avisR as $AVISR) {
+        if (!empty($avisR)) {
+            foreach ($avisR as $AVISR) {
+                $avisresto .= <<<HTML
+                    <div class="avis">
+                        <p class="titreAvis">Avis de : {$AVISR['nomU']} {$AVISR['prenomU']}</p>
+                        <p class="notesAvis">{$AVISR['note']}/5</p>
+                    HTML;
+                if (is_null($AVISR['description'])) {
+                    $avisresto .= <<<HTML
+                    <p class="descriptionAvis">Aucun commentaire.</p>
+                    </div>
+                    HTML;
+                } else {
+                    $avisresto .= <<<HTML
+                    <p class="descriptionAvis">{$AVISR['description']}</p>
+                    </div>
+                    HTML;
+                }
+            }
+        } else {
             $avisresto .= <<<HTML
                 <div class="avis">
-                    <p class="titreAvis">Avis de : {$AVISR['nomU']} {$AVISR['prenomU']}</p>
-                    <p class="notesAvis">{$AVISR['note']}/5</p>
-                HTML;
-            if (is_null($AVISR['description'])) {
-                $avisresto .= <<<HTML
-                <p class="descriptionAvis">Aucun commentaire.</p>
+                    <p class="titreAvis">Aucun avis sur ce restaurant</p>
                 </div>
-                HTML;
-            } else {
-                $avisresto .= <<<HTML
-                <p class="descriptionAvis">{$AVISR['description']}</p>
-                </div>
-                HTML;
-            }
+            HTML;
         }
+
 
     
         return <<<HTML
