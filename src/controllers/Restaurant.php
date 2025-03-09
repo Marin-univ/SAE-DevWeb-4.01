@@ -56,7 +56,7 @@ class Restaurant{
             HTML;
         } elseif ($estConnecte && $testPresentAvis) {
             $boutonsAvis = <<<HTML
-                <form action="/modifAvisController" method="POST">
+                <form action="/modifAvis" method="POST">
                     <input type="hidden" name="idR" id="idR" value="{$this->id}">
                     <button type="submit" class="btn-avis">Modifier mon avis</button>
                 </form>
