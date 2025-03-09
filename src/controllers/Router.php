@@ -67,6 +67,10 @@ class Router
             case '/page_avis':
                 require_once VIEWS_PATH . '/pageAvis.php';
                 break;
+            
+            case '/page_favoris':
+                require_once VIEWS_PATH . '/pageFavoris.php';
+                break;
 
             case '/page_profil':
                 require_once VIEWS_PATH . '/pageProfil.php';
@@ -74,6 +78,10 @@ class Router
 
             case '/supprAvis':
                 require_once CONTROLLERS_PATH . '/suppressionAvis.php';
+                break;
+
+            case '/supprFavoris':
+                require_once CONTROLLERS_PATH . '/suppressionFavoris.php';
                 break;
 
             case '/modifAvis':
