@@ -33,31 +33,59 @@ class Restaurant{
     public function affichagePrecis($estConnecte, $bdd) {
         $chemin_image = "/public/assets/images/" . $this->type . ".png";
         $boutons = "";
-
+    
         $selectAvis = $bdd->prepare('SELECT * FROM AVIS WHERE idU=:idU AND idR=:idR');
         $selectAvis->bindParam(":idU", $_SESSION["id"], PDO::PARAM_INT);
         $selectAvis->bindParam(":idR", $this->id, PDO::PARAM_INT);
         $selectAvis->execute();
         $testAvis = $selectAvis->fetch();
-
-        $testPresent = isset($testAvis['idU']) && isset($testAvis['idR']);
-
-        if ($estConnecte && !$testPresent) {
-            $boutons = <<<HTML
-                <div class="btn-container">
-                    <a href="/restaurant/{$this->id}/avis" class="btn-avis">Laisser un avis</a>
-                    <a href="/restaurant/{$this->id}/favoris" class="btn-favoris">Ajouter aux favoris</a>
-                </div>
+        $testPresentAvis = isset($testAvis['idU']) && isset($testAvis['idR']);
+    
+        $selectFavoris = $bdd->prepare('SELECT * FROM AIMER WHERE idU=:idU AND idR=:idR');
+        $selectFavoris->bindParam(":idU", $_SESSION["id"], PDO::PARAM_INT);
+        $selectFavoris->bindParam(":idR", $this->id, PDO::PARAM_INT);
+        $selectFavoris->execute();
+        $testFavoris = $selectFavoris->fetch();
+        $testPresentFavoris = isset($testFavoris['idU']) && isset($testFavoris['idR']);
+    
+        if ($estConnecte && !$testPresentAvis) {
+            $boutonsAvis = <<<HTML
+                <form action="/restaurant/{$this->id}/avis" method="POST">
+                    <button type="submit" class="btn-avis">Laisser un avis</button>
+                </form>
             HTML;
-        } elseif ($estConnecte && $testPresent) {
-            $boutons = <<<HTML
-                <div class="btn-container">
-                    <a href="/page_avis" class="btn-avis">Modifier mon avis</a>
-                    <a href="/restaurant/{$this->id}/favoris" class="btn-favoris">Ajouter aux favoris</a>
-                </div>
+        } elseif ($estConnecte && $testPresentAvis) {
+            $boutonsAvis = <<<HTML
+                <form action="/page_avis" method="POST">
+                    <input type="hidden" name="idR" id="idR" value="{$this->id}">
+                    <button type="submit" class="btn-avis">Modifier mon avis</button>
+                </form>
             HTML;
+        } else {
+            $boutonsAvis = "";
         }
-
+    
+        if ($estConnecte) {
+            if ($testPresentFavoris) {
+                $boutonsFavoris = <<<HTML
+                    <form action="/supprFavoris" method="POST">
+                        <input type="hidden" name="idR" id="idR" value="{$this->id}">
+                        <input type="hidden" name="resto" id="resto" value="resto">
+                        <button type="submit" class="btn-favoris remove">Supprimer des favoris</button>
+                    </form>
+                HTML;
+            } else {
+                $boutonsFavoris = <<<HTML
+                    <form action="/insertFavoris" method="POST">
+                        <input type="hidden" name="idR" id="idR" value="{$this->id}">
+                        <button type="submit" class="btn-favoris">Ajouter aux favoris</button>
+                    </form>
+                HTML;
+            }
+        } else {
+            $boutonsFavoris = "";
+        }
+    
         return <<<HTML
             <link rel="stylesheet" href="/public/assets/css/restaurantUnique.css">
             <section id="section-detail-resto">
@@ -67,9 +95,12 @@ class Restaurant{
                     <p class="info-resto">Type: {$this->type}</p>
                     <p class="info-resto">Téléphone: {$this->phone}</p>
                     <p class="info-resto">Site web: <a href="{$this->website}" target="_blank">{$this->website}</a></p>
-                    {$boutons}
+                    <div class="btn-container">
+                        {$boutonsAvis}
+                        {$boutonsFavoris}
+                    </div>
                 </div>
             </section>
         HTML;
     }
-}
+}    

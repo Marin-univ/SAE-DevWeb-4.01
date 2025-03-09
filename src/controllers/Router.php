@@ -59,6 +59,10 @@ class Router
             case '/insertAvis':
                 require_once CONTROLLERS_PATH . '/insertAvis.php';
                 break;
+
+            case '/insertFavoris':
+                require_once CONTROLLERS_PATH . '/insertFavoris.php';
+                break;
             
             case '/AvisRestaurant':
                 require_once VIEWS_PATH . '/laisserAvis.php';
