@@ -14,7 +14,6 @@
     </div>
     <div class="content">
         
-
         <form class="connexion" method="POST" action="verfiCo">
             <input type="email" name="mail" id="ident" placeholder="Mail" required/>
             <input type="password" name="passwd" id="new-passwd" placeholder="Mot de passe" required/>

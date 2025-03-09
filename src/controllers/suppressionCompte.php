@@ -1,4 +1,8 @@
 <?php
+use src\controllers\Database;
+
+$bdd = Database::getMysqlConnection();
+
 $id = $_SESSION["id"];
 
 $supr = $bdd->prepare('DELETE FROM USERS WHERE idU=:id');

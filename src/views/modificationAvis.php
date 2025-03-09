@@ -6,11 +6,11 @@ $bdd = Database::getMysqlConnection();
 $idU = $_SESSION['id'];
 $idR = $_POST['idR'];
 
-$query = $bdd->prepare('SELECT * FROM AVIS WHERE idU = :idU AND idR = :idR');
-$query->bindParam(':idU', $idU, PDO::PARAM_INT);
-$query->bindParam(':idR', $idR, PDO::PARAM_INT);
-$query->execute();
-$avis = $query->fetch();
+$selectAvis = $bdd->prepare('SELECT * FROM AVIS WHERE idU = :idU AND idR = :idR');
+$selectAvis->bindParam(':idU', $idU, PDO::PARAM_INT);
+$selectAvis->bindParam(':idR', $idR, PDO::PARAM_INT);
+$selectAvis->execute();
+$avis = $selectAvis->fetch();
 
 if (!$avis) {
     echo "Avis introuvable.";

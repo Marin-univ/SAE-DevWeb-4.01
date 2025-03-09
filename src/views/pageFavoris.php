@@ -10,7 +10,6 @@
             use src\controllers\Database;
             $bdd = Database::getMysqlConnection();
 
-            $mail = $_SESSION["mail"];
             $idU = $_SESSION["id"];
 
             $fav = $bdd->prepare('SELECT * FROM AIMER NATURAL JOIN RESTAURANT WHERE idU=:id GROUP BY idR,idU');
