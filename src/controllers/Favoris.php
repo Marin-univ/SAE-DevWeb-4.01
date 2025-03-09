@@ -3,7 +3,7 @@ namespace src\controllers;
 class Favoris{
     public static function affichage(){
         $bd = Database::getMysqlConnection();
-        $requete = "SELECT R.idR, R.nameR, R.typeR, C.telephone, C.website FROM AIMER  NATURAL JOIN RESTAURANT R NATURAL JOIN CONTACT C WHERE AIMER.idU =:id LIMIT 4;";
+        $requete = "SELECT idR, nameR, typeR, telephone, website FROM AIMER NATURAL JOIN RESTAURANT NATURAL JOIN CONTACT WHERE idU=:id LIMIT 4";
         $execution = $bd->prepare($requete);
         $execution->bindParam(":id",$_SESSION["id"]);
         $execution->execute();
