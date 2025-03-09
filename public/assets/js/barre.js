@@ -2,7 +2,7 @@ document.getElementById("searchButton").addEventListener("click", function() {
     let searchQuery = document.getElementById("searchBar").value;
 
     if (searchQuery.trim() !== "") {
-        fetch("../../../src/controllers/barreRecherche.php?q=" + encodeURIComponent(searchQuery))
+        fetch("../../../src/controllers/barreRecherche.php?recherche=" + encodeURIComponent(searchQuery))
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Erreur réseau !");

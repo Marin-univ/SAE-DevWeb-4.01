@@ -10,7 +10,6 @@ use src\controllers\Database;
 session_start();
 
 Autoloader::register();
-$chargerJSON = new GestionJSON();
 
 $router = new Router();
 $router->handleRequest();
