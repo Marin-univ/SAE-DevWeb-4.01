@@ -40,70 +40,85 @@ IUTables’O est une application web qui permet de gérer et visualiser des rest
 - Autoloading
 - Sessions PHP
 
-## Télécharger le projet
-Dans un terminal tapez la commande
-bash'''
+# Télécharger le projet
+
+Dans un terminal, tapez la commande suivante :
+
+```bash
 git clone https://github.com/Marin-univ/SAE-DevWeb-4.01
-'''
+```
 
-## Lancer le projet
+# Lancer le projet
 
-### Prérequit
--Avoir mysql installé sur sa machine
--Avoir php installé sur sa machine
+## Prérequis
 
-### Faire la mise en place de la BD
-#### Se connecter à la base de donnée en tant que rooter
-bash'''
+- Avoir **MySQL** installé sur sa machine
+- Avoir **PHP** installé sur sa machine
+
+## Mise en place de la base de données
+
+### Se connecter à la base de données en tant que root
+
+```bash
 mysql -u root -p
-'''
+```
 
-#### Créer un nouvel utilisateur appelé mchesneau et ayant comme mot de passe mchesneau
-bash'''
+### Créer un nouvel utilisateur appelé `mchesneau` avec le mot de passe `mchesneau`
+
+```bash
 CREATE USER 'mchesneau'@'localhost' IDENTIFIED BY 'mchesneau';
 GRANT ALL PRIVILEGES ON *.* TO 'mchesneau'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
-'''
+```
 
-#### Supprimer le rooter
-bash'''
+### Supprimer l'utilisateur `root`
+
+```bash
 DROP USER 'root'@'localhost';
 FLUSH PRIVILEGES;
-'''
+```
 
-#### Créer une nouvelle database nommé DBmchesneau et se donner les doits associé
-bash'''
+### Créer une nouvelle base de données nommée `DBmchesneau` et assigner les droits à l'utilisateur
+
+```bash
 CREATE DATABASE DBmchesneau;
 GRANT ALL PRIVILEGES ON DBmchesneau.* TO 'mchesneau'@'localhost';
 FLUSH PRIVILEGES;
-'''
+```
 
-#### Se connecter à la database
-bash'''
-use DBmchesneau
-'''
+### Se connecter à la base de données
 
-#### Importer les tables sur la database
-bash'''
-source BD/table.sql;
-'''
+```bash
+USE DBmchesneau;
+```
 
-#### Mettre les données dans les tables (cette étape peut prendre du temps)
-bash'''
-source BD/insertions.sql;
-'''
+### Importer les tables dans la base de données
 
-#### Sortir de mysql
-bash'''
-exit
-'''
+```bash
+SOURCE BD/table.sql;
+```
 
-### Lancer le site
-bash'''
+### Insérer les données dans les tables (cette étape peut prendre du temps)
+
+```bash
+SOURCE BD/insertions.sql;
+```
+
+### Quitter MySQL
+
+```bash
+EXIT;
+```
+
+## Lancer le site
+
+Démarrez le serveur PHP avec la commande suivante :
+
+```bash
 php -S localhost:8000
-'''
+```
 
-Il faut maintenant aller dans son navigateur et rentrer l'addresse **http://localhost:8000/**
+Ouvrez ensuite votre navigateur et accédez à l'adresse : **[http://localhost:8000/](http://localhost:8000/)**
 
 
 
