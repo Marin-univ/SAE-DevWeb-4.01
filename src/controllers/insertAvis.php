@@ -7,7 +7,7 @@ $idU = $_SESSION['id'];
 $note = $_POST["note"];
 $commentaire = $_POST['com'] ?? null;
 
-if (!empty($idR) && !empty($idU) && !empty($note)) {
+if (!empty($idR) && !empty($idU) && isset($_POST['note']) || $_POST['note'] !== '') {
     $selectAvis = $bdd->prepare('SELECT * FROM AVIS WHERE idU=:idU AND idR=:idR');
     $selectAvis->bindParam(":idU", $idU, PDO::PARAM_INT);
     $selectAvis->bindParam(":idR", $idR, PDO::PARAM_INT);
