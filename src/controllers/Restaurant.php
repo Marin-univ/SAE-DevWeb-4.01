@@ -87,21 +87,53 @@ class Restaurant{
         } else {
             $boutonsFavoris = "";
         }
+
+        $selectAvisR = $bdd->prepare('SELECT * FROM AVIS NATURAL JOIN USERS WHERE idR=:idR ORDER BY dateA');
+        $selectAvisR->bindParam(":idR", $this->id, PDO::PARAM_INT);
+        $selectAvisR->execute();
+        $avisR = $selectAvisR->fetchAll();
+
+        $avisresto = "";
+        foreach ($avisR as $AVISR) {
+            $avisresto .= <<<HTML
+                <div class="avis">
+                    <p class="titreAvis">Avis de : {$AVISR['nomU']} {$AVISR['prenomU']}</p>
+                    <p class="notesAvis">{$AVISR['note']}/5</p>
+                HTML;
+            if (is_null($AVISR['description'])) {
+                $avisresto .= <<<HTML
+                <p class="descriptionAvis">Aucun commentaire.</p>
+                </div>
+                HTML;
+            } else {
+                $avisresto .= <<<HTML
+                <p class="descriptionAvis">{$AVISR['description']}</p>
+                </div>
+                HTML;
+            }
+        }
+
     
         return <<<HTML
             <link rel="stylesheet" href="/public/assets/css/restaurantUnique.css">
             <section id="section-detail-resto">
-                <img id="image-resto" src="{$chemin_image}" alt="image du restaurant">
-                <div class="infos-resto">
-                    <h2 class="nom-resto">{$this->nom}</h2>
-                    <p class="info-resto">Type: {$this->type}</p>
-                    <p class="info-resto">Téléphone: {$this->phone}</p>
-                    <p class="info-resto">Site web: <a href="{$this->website}" target="_blank">{$this->website}</a></p>
-                    <div class="btn-container">
-                        {$boutonsAvis}
-                        {$boutonsFavoris}
+                <section id="infoResto">
+                    <img id="image-resto" src="{$chemin_image}" alt="image du restaurant">
+                    <div class="infos-resto">
+                        <h2 class="nom-resto">{$this->nom}</h2>
+                        <p class="info-resto">Type: {$this->type}</p>
+                        <p class="info-resto">Téléphone: {$this->phone}</p>
+                        <p class="info-resto">Site web: <a href="{$this->website}" target="_blank">{$this->website}</a></p>
+                        <div class="btn-container">
+                            {$boutonsAvis}
+                            {$boutonsFavoris}
+                        </div>
                     </div>
-                </div>
+                </section>
+                <section class="avisR">
+                    <h2>Les avis :</h2>
+                    {$avisresto}
+                </section>
             </section>
         HTML;
     }
